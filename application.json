@@ -1,0 +1,31 @@
+{
+  "pages": [
+    {
+      "id": "主页",
+      "isDefault": true
+    },
+    {
+      "id": "预定会议",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#D6D1F2",
+  "icon": "bag",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "publishedAppLayout": {
+    "type": "FLUID"
+  },
+  "unpublishedCustomJSLibs": [],
+  "publishedCustomJSLibs": [],
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "isManualUpdate": false,
+  "viewerLayout": "{\"color\":\"#3b82f6\",\"logoUrl\":\"https://cdn.jsdelivr.net/gh/Zachery-Liu/chore@main/2205593ZFkd12ZPNx7hLeO.png\",\"name\":\"会议室预约管理系统\",\"treeData\":[{\"title\":\"Booking\",\"pageId\":\"692af5888fc1e0541ea208a3\",\"isPage\":true},{\"title\":\"页面1\",\"pageId\":\"692afae88fc1e0541ea208c1\",\"isPage\":true},{\"title\":\"页面2\",\"pageId\":\"692afaed8fc1e0541ea208c4\",\"isPage\":true}],\"outsiderTree\":[]}",
+  "deleted": false
+}
