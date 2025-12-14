@@ -15,6 +15,14 @@
     {
       "id": "页面2",
       "isDefault": false
+    },
+    {
+      "id": "管理员页面",
+      "isDefault": false
+    },
+    {
+      "id": "我的预定",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -26,7 +34,7 @@
     "type": "FLUID"
   },
   "publishedAppLayout": {
-    "type": "DESKTOP"
+    "type": "FLUID"
   },
   "unpublishedCustomJSLibs": [],
   "publishedCustomJSLibs": [],
