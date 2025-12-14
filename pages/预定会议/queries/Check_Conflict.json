@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "Query2",
+    "name": "Check_Conflict",
     "datasource": {
       "name": "会议室预约管理系统数据库",
       "pluginId": "mysql-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT ",
+      "body": "SELECT COUNT(*) as count\nFROM booking\nWHERE room_id = {{ appsmith.store.target_room_id }}\n  AND status_code IN (0, 1)\n  AND (\n      (start_time < {{ appsmith.store.target_end_time }} AND end_time > {{ appsmith.store.target_start_time }})\n  );",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -27,17 +27,25 @@
       ]
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      " appsmith.store.target_end_time ",
+      " appsmith.store.target_room_id ",
+      " appsmith.store.target_start_time "
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "预定会议_Query2",
+  "id": "预定会议_Check_Conflict",
   "deleted": false,
-  "gitSyncId": "692af5888fc1e0541ea208a0_692bb9ce8fc1e0541ea208cc"
+  "gitSyncId": "693e53428fc1e0541ea2091c_693e61e78fc1e0541ea20934"
 }
