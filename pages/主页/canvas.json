@@ -361,10 +361,10 @@
                       "parentId": "6c9g0dtmy5",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 1,
+                      "originalTopRow": 0,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 6,
+                      "originalBottomRow": 5,
                       "fontSize": "1.875rem",
                       "minDynamicHeight": 4
                     },
@@ -891,8 +891,8 @@
                           "onClick": "{{navigateTo('我的预定', {}, 'SAME_WINDOW')}}"
                         },
                         "groupButton3": {
-                          "label": "管理员页面",
-                          "iconName": "wrench",
+                          "label": "管理员审批",
+                          "iconName": "new-drawing",
                           "id": "groupButton3",
                           "buttonType": "SIMPLE",
                           "placement": "CENTER",
@@ -1014,7 +1014,7 @@
               "originalTopRow": 5,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 68,
+              "originalBottomRow": 65,
               "minDynamicHeight": 10
             }
           ]

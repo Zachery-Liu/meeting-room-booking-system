@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "Query1",
+    "name": "User_CheckIn",
     "datasource": {
       "name": "会议室预约管理系统数据库",
       "pluginId": "mysql-plugin",
@@ -13,10 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "页面1",
+    "pageId": "我的预定",
     "actionConfiguration": {
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
+      "body": "UPDATE booking \nSET \n    status_code = 4\nWHERE \n    booking_id = {{ Table_MyBookings.triggeredRow.booking_id }}\n    AND status_code = 1; -- 只有\"已批准\"的才能签到",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -25,16 +27,23 @@
       ]
     },
     "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      " Table_MyBookings.triggeredRow.booking_id "
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "页面1_Query1",
+  "id": "我的预定_User_CheckIn",
   "deleted": false,
-  "gitSyncId": "692af5888fc1e0541ea208a0_69327e488fc1e0541ea208f1"
+  "gitSyncId": "693e53428fc1e0541ea2091c_693fcdaa8fc1e0541ea20975"
 }

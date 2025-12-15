@@ -49,7 +49,7 @@ export default {
             
             // 5. (可选) 写入日志，凑够3张表工作量
             // 如果你做了 Log_Action 查询，就把下面这行注释打开
-            // await Log_Action.run(); 
+            await Log_Action_Create_Booking.run(); 
 
             // 6. 【UI反馈】成功的收尾工作
             showAlert("预约提交成功！", "success");

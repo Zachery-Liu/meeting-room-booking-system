@@ -9,19 +9,15 @@
       "isDefault": false
     },
     {
-      "id": "页面1",
-      "isDefault": false
-    },
-    {
-      "id": "页面2",
-      "isDefault": false
-    },
-    {
-      "id": "管理员页面",
+      "id": "管理员审批页面",
       "isDefault": false
     },
     {
       "id": "我的预定",
+      "isDefault": false
+    },
+    {
+      "id": "登录页面",
       "isDefault": false
     }
   ],
@@ -47,6 +43,6 @@
   },
   "collapseInvisibleWidgets": true,
   "isManualUpdate": false,
-  "viewerLayout": "{\"color\":\"#3b82f6\",\"logoUrl\":\"https://cdn.jsdelivr.net/gh/Zachery-Liu/chore@main/2205593ZFkd12ZPNx7hLeO.png\",\"name\":\"会议室预约管理系统\",\"treeData\":[{\"title\":\"Booking\",\"pageId\":\"692af5888fc1e0541ea208a3\",\"isPage\":true},{\"title\":\"页面1\",\"pageId\":\"692afae88fc1e0541ea208c1\",\"isPage\":true},{\"title\":\"页面2\",\"pageId\":\"692afaed8fc1e0541ea208c4\",\"isPage\":true}],\"outsiderTree\":[]}",
+  "viewerLayout": "{\"color\":\"{{appsmith.theme.colors.primaryColor}}\",\"logoUrl\":\"https://cdn.jsdelivr.net/gh/Zachery-Liu/chore@main/2205593ZFkd12ZPNx7hLeO.png\",\"name\":\"会议室预约管理系统\",\"treeData\":[{\"title\":\"主页\",\"pageId\":\"692afaed8fc1e0541ea208c4\",\"isPage\":true,\"icon\":\"wap-home-o\"},{\"title\":\"预定会议\",\"pageId\":\"692af5888fc1e0541ea208a3\",\"isPage\":true,\"icon\":\"add-o\"},{\"title\":\"管理员页面\",\"pageId\":\"693e74898fc1e0541ea20939\",\"isPage\":true,\"icon\":\"newspaper-o\"},{\"title\":\"我的预定\",\"pageId\":\"693e7c8e8fc1e0541ea20942\",\"isPage\":true,\"icon\":\"calendar-o\"},{\"title\":\"页面1\",\"pageId\":\"69327dde8fc1e0541ea208f0\",\"isPage\":true},{\"title\":\"页面2\",\"pageId\":\"693bb1a08fc1e0541ea208f7\",\"isPage\":true}],\"outsiderTree\":[]}",
   "deleted": false
 }

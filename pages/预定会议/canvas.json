@@ -651,7 +651,7 @@
                               "leftColumn": 24,
                               "shouldTruncate": false,
                               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "text": "{{ currentItem.description }}",
+                              "text": "{{ currentItem.description }}\n{{}}",
                               "key": "2eezptvhck",
                               "isDeprecated": false,
                               "rightColumn": 64,

@@ -16,10 +16,10 @@
     "pageId": "预定会议",
     "collectionId": "预定会议_checkLogin",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (!appsmith.store.user_id) {\n    showAlert(\"请先登录！\", \"warning\");\n    navigateTo('Login_Page');\n  } else {\n    showAlert(\"欢迎回来，\" + appsmith.store.user_name, \"success\");\n    List_Bookings.run();\n  }\n}",
+      "body": "() => {\n  if (!appsmith.store.user_id) {\n    showAlert(\"请先登录！\", \"warning\");\n    navigateTo('LoginPage');\n  } else {\n    showAlert(\"欢迎回来，\" + appsmith.store.user_name, \"success\");\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (!appsmith.store.user_id) {\n    showAlert(\"请先登录！\", \"warning\");\n    navigateTo('Login_Page');\n  } else {\n    showAlert(\"欢迎回来，\" + appsmith.store.user_name, \"success\");\n    List_Bookings.run();\n  }\n}"
+      "() => {\n  if (!appsmith.store.user_id) {\n    showAlert(\"请先登录！\", \"warning\");\n    navigateTo('LoginPage');\n  } else {\n    showAlert(\"欢迎回来，\" + appsmith.store.user_name, \"success\");\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
