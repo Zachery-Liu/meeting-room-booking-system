@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "checkLogin",
+    "pageId": "管理员审批页面",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "管理员审批页面_checkLogin",
+  "deleted": false,
+  "gitSyncId": "693e53428fc1e0541ea2091c_694002678fc1e0541ea209cf"
+}

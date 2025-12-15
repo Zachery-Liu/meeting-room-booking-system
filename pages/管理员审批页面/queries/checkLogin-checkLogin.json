@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "预定会议",
-    "collectionId": "预定会议_checkLogin",
+    "pageId": "管理员审批页面",
+    "collectionId": "管理员审批页面_checkLogin",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "预定会议_checkLogin.checkLogin",
+  "id": "管理员审批页面_checkLogin.checkLogin",
   "deleted": false,
-  "gitSyncId": "692af5888fc1e0541ea208a0_693bb3188fc1e0541ea208fe"
+  "gitSyncId": "693e53428fc1e0541ea2091c_6940026e8fc1e0541ea209d1"
 }

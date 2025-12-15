@@ -429,7 +429,7 @@
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
-                  "isDisabled": "{{Table_MyBookings.processedTableData.map((currentRow, currentIndex) => (  \n  (() => {\n    const start = moment(currentRow.start_time);\n    const now = moment();\n    const diff = now.diff(start, 'minutes'); // 计算现在离开始时间差了多少分钟\n\n    // 逻辑：\n    // 1. 状态必须是 \"预约成功\" (1)\n    // 3. 时间在 \"开始前15分钟\" 到 \"开始后15分钟\" 之间\n    return currentRow.status_code === 1 \n        && diff >= -15 \n        && diff <= 15;\n  })()\n))}}",
+                  "isDisabled": "{{Table_MyBookings.processedTableData.map((currentRow, currentIndex) => (  \n  currentRow.status_code != 1 || \n  Math.abs(moment().diff(moment(currentRow.start_time), 'minutes')) > 15 \n))}}",
                   "isCellEditable": false,
                   "isEditable": false,
                   "isCellVisible": true,
@@ -445,7 +445,6 @@
                   "customAlias": "",
                   "menuItemsSource": "STATIC",
                   "menuButtonLabel": "签到",
-                  "buttonColor": "#2563eb",
                   "buttonLabel": "签到",
                   "onClick": "{{User_CheckIn.run(() => showAlert('签到成功','success'), () => showAlert('签到失败 请联系管理员','error'))}}"
                 }
