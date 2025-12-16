@@ -939,7 +939,7 @@
                             }
                           },
                           "buttonColor": "#fde047",
-                          "onClick": "{{navigateTo('管理员审批页面', {},'SAME_WINDOW')}}"
+                          "onClick": "{{navigateTo('会议管理（管理员）', {},'SAME_WINDOW')}}"
                         }
                       },
                       "type": "BUTTON_GROUP_WIDGET",
