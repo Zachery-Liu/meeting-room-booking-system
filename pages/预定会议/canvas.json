@@ -14,7 +14,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 660,
+          "bottomRow": 630,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -40,8 +40,8 @@
                 "group",
                 "container"
               ],
-              "topRow": 12,
-              "bottomRow": 35,
+              "topRow": 0,
+              "bottomRow": 23,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -442,10 +442,10 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "originalTopRow": 12,
+              "originalTopRow": 0,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 35,
+              "originalBottomRow": 23,
               "minDynamicHeight": 10
             },
             {
@@ -1256,8 +1256,8 @@
               "searchTags": [
                 "tabs"
               ],
-              "topRow": 2,
-              "bottomRow": 66,
+              "topRow": 0,
+              "bottomRow": 63,
               "parentRowSpace": 10,
               "type": "TABS_WIDGET",
               "hideCard": false,
