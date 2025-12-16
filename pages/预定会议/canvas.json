@@ -14,7 +14,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 670,
+          "bottomRow": 660,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -1257,7 +1257,7 @@
                 "tabs"
               ],
               "topRow": 2,
-              "bottomRow": 67,
+              "bottomRow": 66,
               "parentRowSpace": 10,
               "type": "TABS_WIDGET",
               "hideCard": false,
