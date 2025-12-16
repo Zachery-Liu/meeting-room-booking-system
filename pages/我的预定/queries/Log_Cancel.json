@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO booking_log (booking_id, operator_id, action, comment)\nVALUES (\n    {{ Table_MyBookings.selectedRow.booking_id }}, -- 订单号\n    {{ appsmith.store.user_id }},                  -- 操作人(当前用户)\n    'CANCEL',                                      -- 动作类型\n    '用户在\"我的预约\"页面点击取消'                     -- 备注\n);\n",
+      "body": "INSERT INTO booking_log (booking_id, operator_id, action, comment)\nVALUES (\n    {{ Table_MyBookings.triggeredRow.booking_id }}, -- 订单号\n    {{ appsmith.store.user_id }},                  -- 操作人(当前用户)\n    'CANCEL',                                      -- 动作类型\n    '用户在\"我的预约\"页面点击取消'                     -- 备注\n);\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      " Table_MyBookings.selectedRow.booking_id ",
+      " Table_MyBookings.triggeredRow.booking_id ",
       " appsmith.store.user_id "
     ],
     "userSetOnLoad": false,

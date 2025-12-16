@@ -14,7 +14,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 810,
+          "bottomRow": 670,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -30,7 +30,7 @@
             {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "widgetName": "filter_container",
-              "borderColor": "#E0DEDE",
+              "borderColor": "#ffffff",
               "isCanvas": true,
               "displayName": "容器",
               "iconSVG": "/static/media/icon.1977dca3370505e2db3a8e44cfd54907.svg",
@@ -431,7 +431,7 @@
               ],
               "borderWidth": "1",
               "key": "9kcjjxtk27",
-              "backgroundColor": "#fafafa",
+              "backgroundColor": "#ffffff",
               "isDeprecated": false,
               "rightColumn": 17,
               "dynamicHeight": "AUTO_HEIGHT",
@@ -1257,7 +1257,7 @@
                 "tabs"
               ],
               "topRow": 2,
-              "bottomRow": 81,
+              "bottomRow": 67,
               "parentRowSpace": 10,
               "type": "TABS_WIDGET",
               "hideCard": false,
@@ -1282,7 +1282,7 @@
                   "tabId": "tab1",
                   "widgetName": "Canvas10",
                   "displayName": "Canvas",
-                  "bottomRow": 750,
+                  "bottomRow": 720,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
@@ -2007,130 +2007,10 @@
                   "isDisabled": false,
                   "key": "h7cb0wkubo",
                   "isDeprecated": false,
-                  "tabName": "列表视图",
+                  "tabName": "预约列表",
                   "rightColumn": 291.375,
                   "detachFromLayout": true,
                   "widgetId": "eaiv0do784",
-                  "isVisible": true,
-                  "version": 1,
-                  "parentId": "dx6ctzoooo",
-                  "renderMode": "CANVAS",
-                  "isLoading": false
-                },
-                {
-                  "tabId": "tab2",
-                  "widgetName": "Canvas11",
-                  "displayName": "Canvas",
-                  "bottomRow": 750,
-                  "topRow": 0,
-                  "parentRowSpace": 1,
-                  "type": "CANVAS_WIDGET",
-                  "canExtend": true,
-                  "hideCard": true,
-                  "shouldScrollContents": false,
-                  "minHeight": 150,
-                  "parentColumnSpace": 1,
-                  "dynamicTriggerPathList": [],
-                  "leftColumn": 0,
-                  "dynamicBindingPathList": [],
-                  "children": [
-                    {
-                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-                      "widgetName": "Echarts1",
-                      "allowScroll": false,
-                      "displayName": "Echarts",
-                      "iconSVG": "/static/media/icon.d639d74ea3f095d6be69c6db4b415df6.svg",
-                      "searchTags": [
-                        "graph",
-                        "echart",
-                        "chart",
-                        "visualisations"
-                      ],
-                      "topRow": 0,
-                      "bottomRow": 64,
-                      "parentRowSpace": 10,
-                      "customEchartConfig": "{{\n  {\n    \"tooltip\": {\n      \"trigger\": \"item\",\n      \"formatter\": (params) => {\n        const d = params.data;\n        return `<b>${d.name}</b><br/>主题：${d.subject || '无'}<br/>申请人：${d.user || '未知'}<br/>时间：${moment(d.value[1]).format('HH:mm')} - ${moment(d.value[2]).format('HH:mm')}`;\n      }\n    },\n    \"title\": {\n      \"text\": \"该日会议室占用情况\",\n      \"left\": \"center\"\n    },\n    \"grid\": {\n      \"top\": 40,\n      \"left\": 100,\n      \"right\": 40,\n      \"bottom\": 40\n    },\n    \"xAxis\": {\n      \"type\": \"time\",\n      // 这里的 moment 需要依赖 date_start 组件的值\n      \"min\": moment(date_start.formattedDate || moment()).format('YYYY-MM-DD') + ' 08:00',\n      \"max\": moment(date_start.formattedDate || moment()).format('YYYY-MM-DD') + ' 22:00',\n      \"axisLabel\": { \"formatter\": \"{HH}:{mm}\" }\n    },\n    \"yAxis\": {\n      \"type\": \"category\",\n      // 自动提取房间名\n      \"data\": [...new Set((Get_Daily_Schedule.data || []).map(i => i.room_name))]\n    },\n    \"series\": [{\n      \"type\": \"custom\",\n      \"renderItem\": (params, api) => {\n        const categoryIndex = api.value(0);\n        const start = api.coord([api.value(1), categoryIndex]);\n        const end = api.coord([api.value(2), categoryIndex]);\n        const height = api.size([0, 1])[1] * 0.6;\n        \n        return {\n          type: 'rect',\n          shape: {\n            x: start[0],\n            y: start[1] - height / 2,\n            width: end[0] - start[0],\n            height: height\n          },\n          style: api.style()\n        };\n      },\n      \"itemStyle\": { \"opacity\": 0.8 },\n      \"encode\": { \"x\": [1, 2], \"y\": 0 },\n      \"data\": (Get_Daily_Schedule.data || []).map(item => {\n          const rooms = [...new Set((Get_Daily_Schedule.data || []).map(i => i.room_name))];\n          return {\n              name: item.room_name,\n              value: [\n                  rooms.indexOf(item.room_name), \n                  item.start_time,\n                  item.end_time\n              ],\n              subject: item.subject,\n              user: item.username,\n              itemStyle: {\n                  color: item.status_code === 1 ? '#059669' : '#eab308'\n              }\n          };\n      })\n    }]\n  }\n}}",
-                      "type": "ECHART_WIDGET",
-                      "hideCard": false,
-                      "chartData": {
-                        "7udjhlgw0n": {
-                          "type": "line",
-                          "seriesName": "秋季系列",
-                          "data": [
-                            {
-                              "value": 335,
-                              "name": "衬衫"
-                            },
-                            {
-                              "value": 234,
-                              "name": "羊毛衫"
-                            },
-                            {
-                              "value": 1548,
-                              "name": "雪纺衫"
-                            },
-                            {
-                              "value": 758,
-                              "name": "裤子"
-                            },
-                            {
-                              "value": 358,
-                              "name": "高跟鞋"
-                            },
-                            {
-                              "value": 658,
-                              "name": "袜子"
-                            }
-                          ]
-                        }
-                      },
-                      "animateLoading": true,
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "parentColumnSpace": 7.844482421875,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 1,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "borderRadius"
-                        },
-                        {
-                          "key": "boxShadow"
-                        },
-                        {
-                          "key": "accentColor"
-                        },
-                        {
-                          "key": "fontFamily"
-                        },
-                        {
-                          "key": "customEchartConfig"
-                        }
-                      ],
-                      "mycustom": 2,
-                      "key": "wwainzhs98",
-                      "isDeprecated": false,
-                      "rightColumn": 63,
-                      "widgetId": "d4xmxkymfc",
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "z26f97urh6",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "yAxisName": "",
-                      "chartName": "",
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "xAxisName": "",
-                      "chartType": "CUSTOM_CHART"
-                    }
-                  ],
-                  "isDisabled": false,
-                  "key": "h7cb0wkubo",
-                  "isDeprecated": false,
-                  "tabName": "可视化看板",
-                  "rightColumn": 291.375,
-                  "detachFromLayout": true,
-                  "widgetId": "z26f97urh6",
                   "isVisible": true,
                   "version": 1,
                   "parentId": "dx6ctzoooo",
@@ -2142,7 +2022,7 @@
               "key": "y5b3z0l6zo",
               "backgroundColor": "#FFFFFF",
               "isDeprecated": false,
-              "rightColumn": 60,
+              "rightColumn": 64,
               "dynamicHeight": "FIXED",
               "widgetId": "dx6ctzoooo",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -2150,18 +2030,11 @@
               "shouldShowTabs": true,
               "tabsObj": {
                 "tab1": {
-                  "label": "列表视图",
+                  "label": "预约列表",
                   "id": "tab1",
                   "widgetId": "eaiv0do784",
                   "isVisible": true,
                   "index": 0
-                },
-                "tab2": {
-                  "label": "可视化看板",
-                  "id": "tab2",
-                  "widgetId": "z26f97urh6",
-                  "isVisible": true,
-                  "index": 1
                 }
               },
               "isVisible": true,
@@ -2187,16 +2060,6 @@
             }
           ],
           [
-            {
-              "id": "预定会议_Get_Daily_Schedule",
-              "name": "Get_Daily_Schedule",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                " date_start.formattedDate || moment().format(\"YYYY-MM-DD\") "
-              ],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "预定会议_Search_Rooms",
               "name": "Search_Rooms",

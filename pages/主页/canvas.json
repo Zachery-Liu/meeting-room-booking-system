@@ -48,7 +48,7 @@
               "animateLoading": true,
               "parentColumnSpace": 12,
               "dynamicTriggerPathList": [],
-              "leftColumn": 2,
+              "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
@@ -93,7 +93,7 @@
                       "shouldScrollContents": true,
                       "animateLoading": true,
                       "parentColumnSpace": 9.93115234375,
-                      "leftColumn": 34,
+                      "leftColumn": 28,
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
@@ -651,6 +651,7 @@
                           "children": [
                             {
                               "widgetName": "Text9",
+                              "borderColor": "transparent",
                               "dynamicPropertyPathList": [],
                               "displayName": "文本",
                               "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
@@ -695,12 +696,13 @@
                               "key": "op069d23od",
                               "isDeprecated": false,
                               "rightColumn": 64,
+                              "backgroundColor": "transparent",
                               "textAlign": "CENTER",
                               "dynamicHeight": "AUTO_HEIGHT",
                               "widgetId": "dzqq1otlte",
                               "isVisible": true,
                               "fontStyle": "BOLD",
-                              "textColor": "#231F20",
+                              "textColor": "#231f20",
                               "version": 1,
                               "parentId": "nhfcmwdtxo",
                               "renderMode": "CANVAS",
@@ -937,7 +939,7 @@
                             }
                           },
                           "buttonColor": "#fde047",
-                          "onClick": "{{navigateTo('管理员页面', {},'NEW_WINDOW')}}"
+                          "onClick": "{{navigateTo('管理员审批页面', {},'SAME_WINDOW')}}"
                         }
                       },
                       "type": "BUTTON_GROUP_WIDGET",
@@ -1002,7 +1004,7 @@
               "key": "9kcjjxtk27",
               "backgroundColor": "#FFFFFF",
               "isDeprecated": false,
-              "rightColumn": 60,
+              "rightColumn": 64,
               "dynamicHeight": "AUTO_HEIGHT",
               "widgetId": "2xcrjkrmdu",
               "containerStyle": "card",

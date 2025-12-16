@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "Log_Action_Create_Booking",
+    "name": "Auto_Cancel_Overdue",
     "datasource": {
       "name": "会议室预约管理系统数据库",
       "pluginId": "mysql-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "预定会议",
+    "pageId": "管理员审批页面",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO booking_log (booking_id, operator_id, action, comment)\nVALUES (\n  {{ appsmith.store.temp_booking_id }}, -- 这里也读同一个缓存\n  {{ appsmith.store.user_id }}, \n  'SUBMIT', \n  '用户发起预约申请'\n);",
+      "body": "UPDATE booking \nSET \n  status_code = 2\nWHERE \n  status_code = 0 \n  -- 直接比较：开始时间 < 当前时间\n  AND start_time < NOW();",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -27,24 +27,17 @@
       ]
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      " appsmith.store.temp_booking_id ",
-      " appsmith.store.user_id "
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "预定会议_Log_Action_Create_Booking",
+  "id": "管理员审批页面_Auto_Cancel_Overdue",
   "deleted": false,
-  "gitSyncId": "692af5888fc1e0541ea208a0_692bb9ce8fc1e0541ea208cc"
+  "gitSyncId": "693e53428fc1e0541ea2091c_6940c4bd8fc1e0541ea209fe"
 }

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "Get_Daily_Schedule",
+    "name": "Get_Booking_Logs",
     "datasource": {
       "name": "会议室预约管理系统数据库",
       "pluginId": "mysql-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "预定会议",
+    "pageId": "我的预定",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT \n  r.name AS room_name,\n  b.subject,\n  b.start_time,\n  b.end_time,\n  u.username,\n  b.status_code -- 用于给色块区分颜色 (0:待审批-黄色, 1:已通过-绿色)\nFROM booking b\nJOIN meeting_room r ON b.room_id = r.id\nJOIN user u ON b.user_id = u.id\nWHERE \n  -- 只查状态为 0(待审批) 和 1(已通过) 的，已取消/拒绝的不占用时间轴\n  b.status_code IN (0, 1)\n  -- 核心：只查 date_start 选择器选中的那一天 (如果没选默认查今天)\n  AND DATE(b.start_time) = DATE({{ date_start.formattedDate || moment().format(\"YYYY-MM-DD\") }})\nORDER BY r.id, b.start_time;",
+      "body": "SELECT \n  l.action,            -- 动作 (APPROVE/REJECT/SUBMIT)\n  l.comment,           -- 备注/驳回理由\n  l.log_time,          -- 操作时间\n  u.username AS operator_name -- 操作人名字 (关联查出来)\nFROM booking_log l\nLEFT JOIN user u ON l.operator_id = u.id\nWHERE l.booking_id = {{ Table_MyBookings.triggeredRow.booking_id }}\nORDER BY l.log_time DESC; -- 最新的操作显示在最上面",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -36,14 +36,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      " date_start.formattedDate || moment().format(\"YYYY-MM-DD\") "
+      " Table_MyBookings.triggeredRow.booking_id "
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "预定会议_Get_Daily_Schedule",
+  "id": "我的预定_Get_Booking_Logs",
   "deleted": false,
-  "gitSyncId": "693e53428fc1e0541ea2091c_694004628fc1e0541ea209e3"
+  "gitSyncId": "693e53428fc1e0541ea2091c_69400af38fc1e0541ea209e5"
 }

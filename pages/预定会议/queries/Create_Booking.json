@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO booking \n(booking_id, user_id, room_id, status_code, subject, start_time, end_time)\nVALUES \n(\n  {{ \"B\" + moment().format(\"YYYYMMDDHHmmss\") }},  -- 自动生成流水号\n  {{ appsmith.store.user_id }},                   -- 从缓存取当前用户ID\n  {{ appsmith.store.target_room_id }},          -- 【重点】读弹窗里的下拉框\n  0,                                              -- 默认为待审批\n  {{ input_subject.text }},                       -- 【重点】读弹窗里的输入框\n  {{ date_start.formattedDate }},                 -- 【重点】读弹窗里的时间\n  {{ date_end.formattedDate }}\n);",
+      "body": "INSERT INTO booking \n(booking_id, user_id, room_id, status_code, subject, start_time, end_time)\nVALUES \n(\n {{ appsmith.store.temp_booking_id }},  -- 自动生成流水号\n  {{ appsmith.store.user_id }},                   -- 从缓存取当前用户ID\n  {{ appsmith.store.target_room_id }},          -- 【重点】读弹窗里的下拉框\n  0,                                              -- 默认为待审批\n  {{ input_subject.text }},                       -- 【重点】读弹窗里的输入框\n  {{ date_start.formattedDate }},                 -- 【重点】读弹窗里的时间\n  {{ date_end.formattedDate }}\n);",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,8 +36,8 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      " \"B\" + moment().format(\"YYYYMMDDHHmmss\") ",
       " appsmith.store.target_room_id ",
+      " appsmith.store.temp_booking_id ",
       " appsmith.store.user_id ",
       " date_end.formattedDate ",
       " date_start.formattedDate ",
