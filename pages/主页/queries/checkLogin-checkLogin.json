@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "checkLogin",
-    "fullyQualifiedName": "JSObject1.checkLogin",
+    "fullyQualifiedName": "checkLogin.checkLogin",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "主页",
-    "collectionId": "主页_JSObject1",
+    "collectionId": "主页_checkLogin",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "主页_JSObject1.checkLogin",
+  "id": "主页_checkLogin.checkLogin",
   "deleted": false,
   "gitSyncId": "693e53428fc1e0541ea2091c_694002988fc1e0541ea209e1"
 }

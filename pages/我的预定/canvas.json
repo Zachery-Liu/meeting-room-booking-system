@@ -131,6 +131,9 @@
                 },
                 {
                   "key": "primaryColumns.customColumn3.onClick"
+                },
+                {
+                  "key": "primaryColumns.customColumn2.onClick"
                 }
               ],
               "displayName": "表格",
@@ -446,7 +449,7 @@
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
-                  "isDisabled": "{{Table_MyBookings.processedTableData.map((currentRow, currentIndex) => (  \n  currentRow.status_code != 1 || \n  Math.abs(moment().diff(moment(currentRow.start_time), 'minutes')) > 15 \n))}}",
+                  "isDisabled": "{{Table_MyBookings.processedTableData.map((currentRow, currentIndex) => (  \n  currentRow.status_code != 1 || \n  Math.abs(moment().diff(moment(currentRow.start_time), 'minutes')) < 15 \n))}}",
                   "isCellEditable": false,
                   "isEditable": false,
                   "isCellVisible": true,
@@ -463,7 +466,7 @@
                   "menuItemsSource": "STATIC",
                   "menuButtonLabel": "签到",
                   "buttonLabel": "签到",
-                  "onClick": "{{User_CheckIn.run(() => showAlert('签到成功','success'), () => showAlert('签到失败 请联系管理员','error'))}}",
+                  "onClick": "{{\nUser_CheckIn.run(() => showAlert('签到成功','success'), () => showAlert('签到失败 请联系管理员','error'));\nawait Get_My_History.run();\nawait Log_CheckIn.run();\n}}",
                   "iconName": "small-tick"
                 },
                 "customColumn3": {

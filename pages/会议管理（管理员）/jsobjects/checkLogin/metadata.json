@@ -1,7 +1,7 @@
 {
   "unpublishedCollection": {
     "name": "checkLogin",
-    "pageId": "管理员审批页面",
+    "pageId": "会议管理（管理员）",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -9,7 +9,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "管理员审批页面_checkLogin",
+  "id": "会议管理（管理员）_checkLogin",
   "deleted": false,
   "gitSyncId": "693e53428fc1e0541ea2091c_694002678fc1e0541ea209cf"
 }
