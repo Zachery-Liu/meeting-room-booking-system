@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject4",
+    "pageId": "页面3",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "页面3_JSObject4",
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_693fdd908fc1e0541ea209bd"
+}

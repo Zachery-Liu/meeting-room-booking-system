@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "adminUserListLoad_js",
+    "pageId": "页面3",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "页面3_adminUserListLoad_js",
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_693fced68fc1e0541ea2097b"
+}
