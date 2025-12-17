@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO booking_log (booking_id, operator_id, action, comment, log_time)\nVALUES (\n  {{ Table_All_Bookings.triggeredRow.booking_id }}, -- 读取表格当前行\n  {{ appsmith.store.user_id }},                   -- 操作人（管理员）\n  'Admin_FINISH',                                 -- 动作类型\n  '管理员操作完成',                             -- 备注\n  NOW()\n);",
+      "body": "INSERT INTO booking_log (booking_id, operator_id, action, comment, log_time)\nVALUES (\n  {{ Table_All_Bookings.triggeredRow.booking_id }}, -- 读取表格当前行\n  {{ appsmith.store.user_id }},                   -- 操作人（管理员）\n  'ADMIN_FINISH',                                 -- 动作类型\n  '管理员操作完成',                             -- 备注\n  NOW()\n);",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 540,
+          "bottomRow": 510,
           "containerStyle": "none",
           "snapRows": 65,
           "parentRowSpace": 1,
@@ -141,7 +141,7 @@
                 "datagrid",
                 "table"
               ],
-              "bottomRow": 54,
+              "bottomRow": 51,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,

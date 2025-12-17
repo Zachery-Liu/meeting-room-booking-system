@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO booking_log \n(booking_id, operator_id, action, comment, create_time)\nVALUES \n(\n  {{ appsmith.store.current_audit_item.booking_id }},\n  {{ appsmith.store.user_id }},\n  'REJECT',\n  {{ input_reject_reason.text }},                       -- 【重点】记录驳回的具体原因\n  NOW()\n);",
+      "body": "INSERT INTO booking_log \n(booking_id, operator_id, action, comment, log_time)\nVALUES \n(\n  {{ Table_Pending.triggeredRow.booking_id }},\n  {{ appsmith.store.user_id }},\n  'REJECT',\n  {{ input_reject_reason.text }},\n  NOW()\n);",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      " appsmith.store.current_audit_item.booking_id ",
+      " Table_Pending.triggeredRow.booking_id ",
       " appsmith.store.user_id ",
       " input_reject_reason.text "
     ],

@@ -1455,7 +1455,7 @@
                         "datagrid",
                         "table"
                       ],
-                      "bottomRow": 54,
+                      "bottomRow": 53,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 70,
@@ -1850,7 +1850,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button5Copy",
-                      "onClick": "{{\n  (async () => {\n    try {\n        // 1. 先记日志\n        await Log_Cancel_NoShow.run();\n        \n        // 2. 再更新状态 (1 -> 5)\n        const result = await Auto_Cancel_NoShow.run();\n        \n        // 3. 刷新列表 (虽然违约的不在待办里显示，但也建议刷一下)\n        await Get_Pending_Bookings.run();\n        \n        if (result.affectedRows > 0) {\n            showAlert(`清理完成！已释放 ${result.affectedRows} 个未签到会议室。`, \"success\");\n        } else {\n            showAlert(\"暂无未签到违约记录。\", \"info\");\n        }\n    } catch (error) {\n        showAlert(\"执行失败：\" + error.message, \"error\");\n    }\n  })()\n}}",
+                      "onClick": "{{\n  (async () => {\n    try {\n        // 1. 先记日志\n        await Log_Cancel_NoShow.run();\n        \n        // 2. 再更新状态 (1 -> 5)\n        const result = await Auto_Cancel_NoShow.run();\n        \n        // 3. 刷新列表 (虽然违约的不在待办里显示，但也建议刷一下)\n        await Get_Pending_Bookings.run();\n    } catch (error) {\n        showAlert(\"执行失败：\" + error.message, \"error\");\n    }\n  })()\n}}",
                       "buttonColor": "#facc15",
                       "dynamicPropertyPathList": [
                         {
@@ -1998,7 +1998,7 @@
                         "datagrid",
                         "table"
                       ],
-                      "bottomRow": 53,
+                      "bottomRow": 56,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 70,
@@ -2475,7 +2475,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "确认取消会议?\n{{Table_All_Bookings.triggeredRow.booking_id}}\n{{Table_All_Bookings.triggeredRow.subject}}\n{{Table_All_Bookings.triggeredRow.room_name}}",
+                      "text": "确认取消会议?\n\n{{Table_All_Bookings.triggeredRow.booking_id}}\n\n{{Table_All_Bookings.triggeredRow.subject}}\n{{Table_All_Bookings.triggeredRow.room_name}}",
                       "key": "jg9a0qilh2",
                       "isDeprecated": false,
                       "rightColumn": 64,
@@ -2484,7 +2484,7 @@
                       "widgetId": "ipprl54a6k",
                       "isVisible": true,
                       "fontStyle": "BOLD",
-                      "textColor": "#dc2626",
+                      "textColor": "#231f20",
                       "version": 1,
                       "parentId": "xgwp0yda5w",
                       "renderMode": "CANVAS",
@@ -2551,7 +2551,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button7",
-                      "onClick": "{{\n  (async () => {\n    // 增加一个确认弹窗会更好，但这里为了简单直接执行\n    await Admin_Force_Cancel.run();\n    await Log_Admin_Cancel.run();\n    await Get_All_Bookings.run(); // 刷新表格\n    showAlert('已强制取消该会议', 'success');\n  })()\n}}",
+                      "onClick": "{{\n  (async () => {\n    // 增加一个确认弹窗会更好，但这里为了简单直接执行\n    await Admin_Cancel.run();\n    await Log_Admin_Cancel.run();\n    await Get_All_Bookings.run(); // 刷新表格\n    showAlert('已强制取消该会议', 'success');\n  })()\n}}",
                       "buttonColor": "#dc2626",
                       "dynamicPropertyPathList": [
                         {

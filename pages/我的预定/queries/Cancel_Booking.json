@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE booking\nSET\n    status_code = 3           -- 将状态改为 3 (已取消)\nWHERE\n    booking_id = {{ Table_MyBookings.selectedRow.booking_id }}  -- 锁定当前选中的订单\n    AND user_id = {{ appsmith.store.user_id }};                -- 【安全锁】确保只能取消自己的单子",
+      "body": "UPDATE booking\nSET\n    status_code = 3           -- 将状态改为 3 (已取消)\nWHERE\n    booking_id = {{ Table_MyBookings.triggered.booking_id }}  -- 锁定当前选中的订单\n    AND user_id = {{ appsmith.store.user_id }};                -- 【安全锁】确保只能取消自己的单子",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      " Table_MyBookings.selectedRow.booking_id ",
+      " Table_MyBookings.triggered.booking_id ",
       " appsmith.store.user_id "
     ],
     "userSetOnLoad": false,

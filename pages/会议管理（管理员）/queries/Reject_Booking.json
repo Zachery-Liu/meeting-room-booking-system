@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE booking\nSET status_code = 2, -- 2代表已拒绝\n    comment = {{ input_reject_reason.text }} -- 记录驳回理由(假设表里有这个字段，没有就算了)\nWHERE booking_id = {{ Table_Pending.triggeredRow.booking_id }};",
+      "body": "UPDATE booking\nSET status_code = 2 -- 2代表已拒绝\nWHERE booking_id = {{ Table_Pending.triggeredRow.booking_id }};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,8 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      " Table_Pending.triggeredRow.booking_id ",
-      " input_reject_reason.text "
+      " Table_Pending.triggeredRow.booking_id "
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
