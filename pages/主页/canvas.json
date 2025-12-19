@@ -1,0 +1,1070 @@
+{
+  "unpublishedPage": {
+    "name": "主页",
+    "slug": "",
+    "customSlug": "homepage",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 600,
+          "containerStyle": "none",
+          "snapRows": 65,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 77,
+          "minHeight": 670,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "widgetName": "Container2",
+              "borderColor": "#E0DEDE",
+              "isCanvas": true,
+              "displayName": "容器",
+              "iconSVG": "/static/media/icon.1977dca3370505e2db3a8e44cfd54907.svg",
+              "searchTags": [
+                "div",
+                "parent",
+                "group",
+                "container"
+              ],
+              "topRow": 0,
+              "bottomRow": 60,
+              "parentRowSpace": 10,
+              "type": "CONTAINER_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": true,
+              "animateLoading": true,
+              "parentColumnSpace": 12,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                }
+              ],
+              "children": [
+                {
+                  "widgetName": "Canvas4",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 600,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "hideCard": true,
+                  "minHeight": 100,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "widgetName": "room_tops_container",
+                      "borderColor": "#E0DEDE",
+                      "isCanvas": true,
+                      "displayName": "容器",
+                      "iconSVG": "/static/media/icon.1977dca3370505e2db3a8e44cfd54907.svg",
+                      "searchTags": [
+                        "div",
+                        "parent",
+                        "group",
+                        "container"
+                      ],
+                      "topRow": 23,
+                      "bottomRow": 58,
+                      "parentRowSpace": 10,
+                      "type": "CONTAINER_WIDGET",
+                      "hideCard": false,
+                      "shouldScrollContents": true,
+                      "animateLoading": true,
+                      "parentColumnSpace": 9.93115234375,
+                      "leftColumn": 28,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "boxShadow"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "widgetName": "Canvas5Copy",
+                          "displayName": "Canvas",
+                          "topRow": 0,
+                          "bottomRow": 350,
+                          "parentRowSpace": 1,
+                          "type": "CANVAS_WIDGET",
+                          "canExtend": false,
+                          "hideCard": true,
+                          "minHeight": 100,
+                          "parentColumnSpace": 1,
+                          "leftColumn": 0,
+                          "dynamicBindingPathList": [],
+                          "children": [
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "room_tops_column_chart",
+                              "allowScroll": false,
+                              "dynamicPropertyPathList": [],
+                              "displayName": "Echarts",
+                              "iconSVG": "/static/media/icon.d639d74ea3f095d6be69c6db4b415df6.svg",
+                              "searchTags": [
+                                "graph",
+                                "echart",
+                                "chart",
+                                "visualisations"
+                              ],
+                              "topRow": 4,
+                              "bottomRow": 33,
+                              "listener": {},
+                              "parentRowSpace": 10,
+                              "customEchartConfig": {
+                                "title": {
+                                  "text": "基础折线图"
+                                },
+                                "xAxis": {
+                                  "type": "category",
+                                  "data": [
+                                    "Mon",
+                                    "Tue",
+                                    "Wed",
+                                    "Thu",
+                                    "Fri",
+                                    "Sat",
+                                    "Sun"
+                                  ]
+                                },
+                                "yAxis": {
+                                  "type": "value"
+                                },
+                                "series": [
+                                  {
+                                    "data": [
+                                      150,
+                                      230,
+                                      224,
+                                      218,
+                                      135,
+                                      147,
+                                      260
+                                    ],
+                                    "type": "line"
+                                  }
+                                ]
+                              },
+                              "type": "ECHART_WIDGET",
+                              "hideCard": false,
+                              "chartData": {
+                                "r14yak4ltc": {
+                                  "type": "line",
+                                  "seriesName": "",
+                                  "data": "{{ Stat_TopRooms.data }}"
+                                }
+                              },
+                              "animateLoading": true,
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "parentColumnSpace": 9.93115234375,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 0,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "borderRadius"
+                                },
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "chartData.r14yak4ltc.data"
+                                }
+                              ],
+                              "mycustom": 2,
+                              "key": "0z6e2qiyci",
+                              "isDeprecated": false,
+                              "rightColumn": 64,
+                              "backgroundColor": "transparent",
+                              "widgetId": "wd1f237fke",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "eakkumlis8",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "yAxisName": "",
+                              "originalTopRow": 16,
+                              "chartName": "",
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "xAxisName": "",
+                              "originalBottomRow": 48,
+                              "chartType": "BAR_CHART"
+                            },
+                            {
+                              "widgetName": "room_tops_title",
+                              "displayName": "文本",
+                              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                              "searchTags": [
+                                "typography",
+                                "paragraph",
+                                "label",
+                                "text",
+                                "文字",
+                                "标题",
+                                "段落",
+                                "字符"
+                              ],
+                              "topRow": 0,
+                              "bottomRow": 4,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "overflow": "NONE",
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "parentColumnSpace": 4.3427276611328125,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "truncateButtonColor"
+                                },
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "shouldTruncate": false,
+                              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "text": "热门会议室 TOP5",
+                              "key": "op069d23od",
+                              "isDeprecated": false,
+                              "rightColumn": 64,
+                              "textAlign": "CENTER",
+                              "dynamicHeight": "AUTO_HEIGHT",
+                              "widgetId": "jx03cavx8o",
+                              "isVisible": true,
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "eakkumlis8",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "1rem",
+                              "minDynamicHeight": 4
+                            }
+                          ],
+                          "key": "pr7m8ea57p",
+                          "isDeprecated": false,
+                          "rightColumn": 218.4853515625,
+                          "detachFromLayout": true,
+                          "widgetId": "eakkumlis8",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "jiky742ayt",
+                          "renderMode": "CANVAS",
+                          "isLoading": false
+                        }
+                      ],
+                      "borderWidth": "1",
+                      "key": "0odkbuaf75",
+                      "backgroundColor": "#FFFFFF",
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "dynamicHeight": "AUTO_HEIGHT",
+                      "widgetId": "jiky742ayt",
+                      "containerStyle": "card",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "6c9g0dtmy5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "originalTopRow": 23,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "originalBottomRow": 58,
+                      "minDynamicHeight": 10
+                    },
+                    {
+                      "widgetName": "Text6",
+                      "displayName": "文本",
+                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                      "searchTags": [
+                        "typography",
+                        "paragraph",
+                        "label",
+                        "text",
+                        "文字",
+                        "标题",
+                        "段落",
+                        "字符"
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 5,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 9.8125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 4,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "truncateButtonColor"
+                        },
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "text": "欢迎回来 {{ appsmith.store.user_name || '用户' + appsmith.store.user_id }}",
+                      "key": "6r4rvdtc00",
+                      "isDeprecated": false,
+                      "rightColumn": 60,
+                      "textAlign": "CENTER",
+                      "dynamicHeight": "AUTO_HEIGHT",
+                      "widgetId": "m4z6tkqrc9",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "6c9g0dtmy5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "originalTopRow": 0,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "originalBottomRow": 5,
+                      "fontSize": "1.875rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "widgetName": "room_status_container",
+                      "borderColor": "#E0DEDE",
+                      "isCanvas": true,
+                      "displayName": "容器",
+                      "iconSVG": "/static/media/icon.1977dca3370505e2db3a8e44cfd54907.svg",
+                      "searchTags": [
+                        "div",
+                        "parent",
+                        "group",
+                        "container"
+                      ],
+                      "topRow": 23,
+                      "bottomRow": 58,
+                      "parentRowSpace": 10,
+                      "type": "CONTAINER_WIDGET",
+                      "hideCard": false,
+                      "shouldScrollContents": true,
+                      "animateLoading": true,
+                      "parentColumnSpace": 9.93115234375,
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "boxShadow"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "widgetName": "Canvas5",
+                          "displayName": "Canvas",
+                          "topRow": 0,
+                          "bottomRow": 350,
+                          "parentRowSpace": 1,
+                          "type": "CANVAS_WIDGET",
+                          "canExtend": false,
+                          "hideCard": true,
+                          "minHeight": 100,
+                          "parentColumnSpace": 1,
+                          "leftColumn": 0,
+                          "dynamicBindingPathList": [],
+                          "children": [
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "room_status_pie_chart",
+                              "allowScroll": false,
+                              "dynamicPropertyPathList": [],
+                              "displayName": "Echarts",
+                              "iconSVG": "/static/media/icon.d639d74ea3f095d6be69c6db4b415df6.svg",
+                              "searchTags": [
+                                "graph",
+                                "echart",
+                                "chart",
+                                "visualisations"
+                              ],
+                              "topRow": 4,
+                              "bottomRow": 33,
+                              "listener": {},
+                              "parentRowSpace": 10,
+                              "customEchartConfig": {
+                                "title": {
+                                  "text": "基础折线图"
+                                },
+                                "xAxis": {
+                                  "type": "category",
+                                  "data": [
+                                    "Mon",
+                                    "Tue",
+                                    "Wed",
+                                    "Thu",
+                                    "Fri",
+                                    "Sat",
+                                    "Sun"
+                                  ]
+                                },
+                                "yAxis": {
+                                  "type": "value"
+                                },
+                                "series": [
+                                  {
+                                    "data": [
+                                      150,
+                                      230,
+                                      224,
+                                      218,
+                                      135,
+                                      147,
+                                      260
+                                    ],
+                                    "type": "line"
+                                  }
+                                ]
+                              },
+                              "type": "ECHART_WIDGET",
+                              "hideCard": false,
+                              "chartData": {
+                                "r14yak4ltc": {
+                                  "type": "line",
+                                  "seriesName": "资源状态分布",
+                                  "data": "{{ Stat_RoomStatus.data }}"
+                                }
+                              },
+                              "animateLoading": true,
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "parentColumnSpace": 9.93115234375,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 0,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "borderRadius"
+                                },
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "chartData.r14yak4ltc.data"
+                                }
+                              ],
+                              "mycustom": 2,
+                              "key": "0z6e2qiyci",
+                              "isDeprecated": false,
+                              "rightColumn": 64,
+                              "backgroundColor": "transparent",
+                              "widgetId": "t2vyxsscfz",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "q25wteb6ay",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "yAxisName": "",
+                              "originalTopRow": 4,
+                              "chartName": "",
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "xAxisName": "",
+                              "originalBottomRow": 33,
+                              "chartType": "PIE_CHART"
+                            },
+                            {
+                              "widgetName": "room_status_title",
+                              "displayName": "文本",
+                              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                              "searchTags": [
+                                "typography",
+                                "paragraph",
+                                "label",
+                                "text",
+                                "文字",
+                                "标题",
+                                "段落",
+                                "字符"
+                              ],
+                              "topRow": 0,
+                              "bottomRow": 4,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "overflow": "NONE",
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "parentColumnSpace": 4.3427276611328125,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "truncateButtonColor"
+                                },
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "shouldTruncate": false,
+                              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "text": "会议室占用情况",
+                              "key": "op069d23od",
+                              "isDeprecated": false,
+                              "rightColumn": 64,
+                              "textAlign": "CENTER",
+                              "dynamicHeight": "AUTO_HEIGHT",
+                              "widgetId": "urqn4zzf22",
+                              "isVisible": true,
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "q25wteb6ay",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "originalTopRow": 0,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "originalBottomRow": 4,
+                              "fontSize": "1rem",
+                              "minDynamicHeight": 4
+                            }
+                          ],
+                          "key": "pr7m8ea57p",
+                          "isDeprecated": false,
+                          "rightColumn": 218.4853515625,
+                          "detachFromLayout": true,
+                          "widgetId": "q25wteb6ay",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "uwiglwt0z1",
+                          "renderMode": "CANVAS",
+                          "isLoading": false
+                        }
+                      ],
+                      "borderWidth": "1",
+                      "key": "0odkbuaf75",
+                      "backgroundColor": "#FFFFFF",
+                      "isDeprecated": false,
+                      "rightColumn": 28,
+                      "dynamicHeight": "AUTO_HEIGHT",
+                      "widgetId": "uwiglwt0z1",
+                      "containerStyle": "card",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "6c9g0dtmy5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "originalTopRow": 23,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "originalBottomRow": 58,
+                      "minDynamicHeight": 10
+                    },
+                    {
+                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "widgetName": "Container4",
+                      "borderColor": "#E0DEDE",
+                      "isCanvas": true,
+                      "displayName": "容器",
+                      "iconSVG": "/static/media/icon.1977dca3370505e2db3a8e44cfd54907.svg",
+                      "searchTags": [
+                        "div",
+                        "parent",
+                        "group",
+                        "container"
+                      ],
+                      "topRow": 5,
+                      "bottomRow": 15,
+                      "parentRowSpace": 10,
+                      "type": "CONTAINER_WIDGET",
+                      "hideCard": false,
+                      "shouldScrollContents": true,
+                      "animateLoading": true,
+                      "parentColumnSpace": 9.93115234375,
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "boxShadow"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "widgetName": "Canvas6",
+                          "displayName": "Canvas",
+                          "topRow": 0,
+                          "bottomRow": 100,
+                          "parentRowSpace": 1,
+                          "type": "CANVAS_WIDGET",
+                          "canExtend": false,
+                          "hideCard": true,
+                          "minHeight": 100,
+                          "parentColumnSpace": 1,
+                          "leftColumn": 0,
+                          "dynamicBindingPathList": [],
+                          "children": [
+                            {
+                              "widgetName": "Text9",
+                              "borderColor": "transparent",
+                              "dynamicPropertyPathList": [],
+                              "displayName": "文本",
+                              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                              "searchTags": [
+                                "typography",
+                                "paragraph",
+                                "label",
+                                "text",
+                                "文字",
+                                "标题",
+                                "段落",
+                                "字符"
+                              ],
+                              "topRow": 4,
+                              "bottomRow": 8,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "overflow": "NONE",
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "parentColumnSpace": 9.61865234375,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 0,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "truncateButtonColor"
+                                },
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                },
+                                {
+                                  "key": "text"
+                                }
+                              ],
+                              "shouldTruncate": false,
+                              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "text": "{{ \n  Get_Today_Meetings.data.length > 0 \n  ? ` 提醒：您今天有 ${Get_Today_Meetings.data.length} 场会议，最近一场是 ${Get_Today_Meetings.data[0].start_time} 在 ${Get_Today_Meetings.data[0].room_name} 召开。`\n  : \" 您今天没有会议安排，享受工作吧！\" \n}}",
+                              "key": "op069d23od",
+                              "isDeprecated": false,
+                              "rightColumn": 64,
+                              "backgroundColor": "transparent",
+                              "textAlign": "CENTER",
+                              "dynamicHeight": "AUTO_HEIGHT",
+                              "widgetId": "dzqq1otlte",
+                              "isVisible": true,
+                              "fontStyle": "BOLD",
+                              "textColor": "#231f20",
+                              "version": 1,
+                              "parentId": "nhfcmwdtxo",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "originalTopRow": 5,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "originalBottomRow": 9,
+                              "fontSize": "1.25rem",
+                              "minDynamicHeight": 4
+                            },
+                            {
+                              "widgetName": "Text7",
+                              "displayName": "文本",
+                              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                              "searchTags": [
+                                "typography",
+                                "paragraph",
+                                "label",
+                                "text",
+                                "文字",
+                                "标题",
+                                "段落",
+                                "字符"
+                              ],
+                              "topRow": 0,
+                              "bottomRow": 4,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "overflow": "NONE",
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "parentColumnSpace": 9.93115234375,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 0,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "truncateButtonColor"
+                                },
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                },
+                                {
+                                  "key": "text"
+                                }
+                              ],
+                              "shouldTruncate": false,
+                              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "text": "今天是 {{ moment().format('YYYY年MM月DD日 dddd') }}",
+                              "key": "2eezptvhck",
+                              "isDeprecated": false,
+                              "rightColumn": 64,
+                              "textAlign": "CENTER",
+                              "dynamicHeight": "AUTO_HEIGHT",
+                              "widgetId": "xet0vk8n2f",
+                              "isVisible": true,
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "nhfcmwdtxo",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "originalTopRow": 0,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "originalBottomRow": 5,
+                              "fontSize": "0.875rem",
+                              "minDynamicHeight": 4
+                            }
+                          ],
+                          "key": "pr7m8ea57p",
+                          "isDeprecated": false,
+                          "rightColumn": 218.4853515625,
+                          "detachFromLayout": true,
+                          "widgetId": "nhfcmwdtxo",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "vz7da9xemj",
+                          "renderMode": "CANVAS",
+                          "isLoading": false
+                        }
+                      ],
+                      "borderWidth": "1",
+                      "key": "0odkbuaf75",
+                      "backgroundColor": "#FFFFFF",
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "dynamicHeight": "AUTO_HEIGHT",
+                      "widgetId": "vz7da9xemj",
+                      "containerStyle": "card",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "6c9g0dtmy5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "originalTopRow": 5,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "originalBottomRow": 15,
+                      "minDynamicHeight": 10
+                    },
+                    {
+                      "widgetName": "Divider1",
+                      "thickness": 2,
+                      "displayName": "分隔线",
+                      "iconSVG": "/static/media/icon.cbe8f608ca868e1eb44607e5fbd4a9e5.svg",
+                      "searchTags": [
+                        "line",
+                        "divider"
+                      ],
+                      "topRow": 19,
+                      "bottomRow": 23,
+                      "parentRowSpace": 10,
+                      "type": "DIVIDER_WIDGET",
+                      "capType": "nc",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 10.68994140625,
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [],
+                      "key": "p4tun71ar9",
+                      "dividerColor": "#858282",
+                      "orientation": "horizontal",
+                      "strokeStyle": "solid",
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "widgetId": "939d3ezau6",
+                      "capSide": 0,
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "6c9g0dtmy5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "originalTopRow": 19,
+                      "originalBottomRow": 23
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "ButtonGroup1",
+                      "isCanvas": false,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "groupButtons.groupButton3.isVisible"
+                        }
+                      ],
+                      "displayName": "按钮组",
+                      "iconSVG": "/static/media/icon.d6773218cfb61dcfa5f460d43371e30d.svg",
+                      "searchTags": [
+                        "click",
+                        "submit",
+                        "button group"
+                      ],
+                      "topRow": 15,
+                      "bottomRow": 19,
+                      "parentRowSpace": 10,
+                      "groupButtons": {
+                        "groupButton1": {
+                          "label": "前往预约",
+                          "iconName": "add",
+                          "id": "groupButton1",
+                          "widgetId": "",
+                          "buttonType": "SIMPLE",
+                          "placement": "CENTER",
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "index": 0,
+                          "menuItems": {},
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "onClick": "{{navigateTo('预定会议', {}, 'SAME_WINDOW')}}"
+                        },
+                        "groupButton2": {
+                          "label": "我的预定",
+                          "iconName": "calendar",
+                          "id": "groupButton2",
+                          "buttonType": "SIMPLE",
+                          "placement": "CENTER",
+                          "widgetId": "",
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "index": 1,
+                          "menuItems": {},
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "onClick": "{{navigateTo('我的预定', {}, 'SAME_WINDOW')}}"
+                        },
+                        "groupButton3": {
+                          "label": "管理员审批",
+                          "iconName": "new-drawing",
+                          "id": "groupButton3",
+                          "buttonType": "SIMPLE",
+                          "placement": "CENTER",
+                          "widgetId": "",
+                          "isVisible": "true",
+                          "isDisabled": false,
+                          "index": 2,
+                          "menuItems": {
+                            "menuItem1": {
+                              "label": "第一项",
+                              "backgroundColor": "#FFFFFF",
+                              "id": "menuItem1",
+                              "widgetId": "",
+                              "onClick": "",
+                              "isVisible": true,
+                              "isDisabled": false,
+                              "index": 0
+                            },
+                            "menuItem2": {
+                              "label": "第二项",
+                              "backgroundColor": "#FFFFFF",
+                              "id": "menuItem2",
+                              "widgetId": "",
+                              "onClick": "",
+                              "isVisible": true,
+                              "isDisabled": false,
+                              "index": 1
+                            },
+                            "menuItem3": {
+                              "label": "删除",
+                              "iconName": "trash",
+                              "iconColor": "#FFFFFF",
+                              "iconAlign": "right",
+                              "textColor": "#FFFFFF",
+                              "backgroundColor": "#DD4B34",
+                              "id": "menuItem3",
+                              "widgetId": "",
+                              "onClick": "",
+                              "isVisible": true,
+                              "isDisabled": false,
+                              "index": 2
+                            }
+                          },
+                          "buttonColor": "#fde047",
+                          "onClick": "{{navigateTo('会议管理（管理员）', {},'SAME_WINDOW')}}"
+                        }
+                      },
+                      "type": "BUTTON_GROUP_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 10.68994140625,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "groupButtons.groupButton1.onClick"
+                        },
+                        {
+                          "key": "groupButtons.groupButton2.onClick"
+                        },
+                        {
+                          "key": "groupButtons.groupButton3.onClick"
+                        }
+                      ],
+                      "leftColumn": 12,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "groupButtons.groupButton1.buttonColor"
+                        },
+                        {
+                          "key": "groupButtons.groupButton2.buttonColor"
+                        }
+                      ],
+                      "key": "zs2nuvvyf6",
+                      "orientation": "horizontal",
+                      "isDeprecated": false,
+                      "rightColumn": 52,
+                      "widgetId": "d1omjzrgxm",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "6c9g0dtmy5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+                        }
+                      },
+                      "originalTopRow": 15,
+                      "borderRadius": "0.375rem",
+                      "originalBottomRow": 19,
+                      "buttonVariant": "PRIMARY"
+                    }
+                  ],
+                  "key": "ozakjgly5w",
+                  "isDeprecated": false,
+                  "rightColumn": 288,
+                  "detachFromLayout": true,
+                  "widgetId": "6c9g0dtmy5",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "2xcrjkrmdu",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
+                }
+              ],
+              "borderWidth": "1",
+              "key": "9kcjjxtk27",
+              "backgroundColor": "#FFFFFF",
+              "isDeprecated": false,
+              "rightColumn": 64,
+              "dynamicHeight": "AUTO_HEIGHT",
+              "widgetId": "2xcrjkrmdu",
+              "containerStyle": "card",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "originalTopRow": 0,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "originalBottomRow": 60,
+              "minDynamicHeight": 10
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "主页_Stat_RoomStatus",
+              "name": "Stat_RoomStatus",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "主页_Stat_TopRooms",
+              "name": "Stat_TopRooms",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "主页_Get_Today_Meetings",
+              "name": "Get_Today_Meetings",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                " appsmith.store.user_id "
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "主页",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_692afaed8fc1e0541ea208c3"
+}
