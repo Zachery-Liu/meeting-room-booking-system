@@ -16,7 +16,7 @@
     "pageId": "注册页面",
     "collectionId": "注册页面_JSObject3",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "async function () {\n  const userPerms = appsmith.store?.permissions || [];\n  const targetPermission = 'user:manage';\n  let hasPermission = false;\n  if (Array.isArray(userPerms)) {\n    hasPermission = userPerms.includes(targetPermission);\n  } else if (typeof userPerms === 'string') {\n    hasPermission = userPerms.split(',').includes(targetPermission);\n  }\n  if (!hasPermission) {\n    showAlert('无此操作权限！', 'error');\n    navigateTo('Home_Page');\n    return false;\n  }\n  return true;\n}",

@@ -16,7 +16,7 @@
     "pageId": "注册页面",
     "collectionId": "注册页面_JSObject4",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "async function () {\n  try {\n    if (!appsmith.store || !appsmith.store.user_id || appsmith.store.role !== 'admin') {\n      showAlert('无管理员权限，禁止访问！', 'error');\n      navigateTo('登录页');\n      return;\n    }\n    const pageNum = input_page_num?.value ? Number(input_page_num.value) : 1;\n    const pageSize = 10;\n    const offset = (pageNum - 1) * pageSize;\n    const userList = await db_auth.query(`\n        SELECT u.*, d.dept_name \n        FROM User u \n        LEFT JOIN Department d ON u.dept_id = d.dept_id \n        LIMIT ? OFFSET ?\n      `, [pageSize, offset]);\n    table_users.setData(userList || []);\n    const totalRes = await db_auth.query(`SELECT COUNT(*) AS total FROM User`);\n    const total = totalRes[0]?.total || 0;\n    if (pagination_users) {\n      pagination_users.setTotalItems(total);\n    }\n    return userList;\n  } catch (error) {\n    showAlert(`分页查询失败：${error.message}`, 'error');\n    console.error('分页查询错误：', error);\n    return [];\n  }\n}",

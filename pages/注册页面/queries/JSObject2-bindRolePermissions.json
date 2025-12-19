@@ -16,7 +16,7 @@
     "pageId": "注册页面",
     "collectionId": "注册页面_JSObject2",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "async function () {\n  try {\n    const selectedPermIds = 实际权限表格组件ID.selectedRows.map(item => item.permission_id);\n    const roleId = 实际角色表格组件ID.selectedRow?.role_id;\n    if (!roleId || selectedPermIds.length === 0) {\n      showAlert('请选择角色和权限！', 'warning');\n      return;\n    }\n    const db = 实际数据源名称;\n    await db.query('DELETE FROM Role_Permission_Map WHERE role_id = ?', [roleId]);\n    for (const permId of selectedPermIds) {\n      await db.query(`\n          INSERT INTO Role_Permission_Map (role_id, permission_id)\n          VALUES (?, ?)\n        `, [roleId, permId]);\n    }\n    showAlert('权限绑定成功！', 'success');\n    await JSObject1.fetchRolePermissions();\n  } catch (error) {\n    showAlert(`绑定失败：${error.message}`, 'error');\n    console.error('权限绑定错误：', error);\n  }\n}",
