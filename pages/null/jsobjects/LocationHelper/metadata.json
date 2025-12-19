@@ -1,7 +1,6 @@
 {
   "unpublishedCollection": {
-    "name": "submitBooking",
-    "pageId": "预定会议",
+    "name": "LocationHelper",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -9,7 +8,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "预定会议_submitBooking",
+  "id": "null_LocationHelper",
   "deleted": false,
-  "gitSyncId": "692af5888fc1e0541ea208a0_693bdf7c8fc1e0541ea20918"
+  "gitSyncId": "692af5888fc1e0541ea208a0_693bbea38fc1e0541ea20910"
 }

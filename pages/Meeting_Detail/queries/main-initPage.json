@@ -16,7 +16,7 @@
     "pageId": "Meeting_Detail",
     "collectionId": "Meeting_Detail_main",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  showAlert(\"页面初始化成功\", \"success\");\n}",

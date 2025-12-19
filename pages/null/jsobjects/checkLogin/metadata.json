@@ -1,7 +1,6 @@
 {
   "unpublishedCollection": {
-    "name": "LocationHelper",
-    "pageId": "预定会议",
+    "name": "checkLogin",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -9,7 +8,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "预定会议_LocationHelper",
+  "id": "null_checkLogin",
   "deleted": false,
-  "gitSyncId": "692af5888fc1e0541ea208a0_693bbea38fc1e0541ea20910"
+  "gitSyncId": "692af5888fc1e0541ea208a0_693bb3148fc1e0541ea208fc"
 }

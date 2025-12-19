@@ -1,7 +1,6 @@
 {
   "unpublishedCollection": {
-    "name": "checkLogin",
-    "pageId": "预定会议",
+    "name": "submitBooking",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -9,7 +8,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "预定会议_checkLogin",
+  "id": "null_submitBooking",
   "deleted": false,
-  "gitSyncId": "692af5888fc1e0541ea208a0_693bb3148fc1e0541ea208fc"
+  "gitSyncId": "692af5888fc1e0541ea208a0_693bdf7c8fc1e0541ea20918"
 }
