@@ -1,14 +1,6 @@
 {
   "pages": [
     {
-      "id": "主页",
-      "isDefault": false
-    },
-    {
-      "id": "预定会议",
-      "isDefault": false
-    },
-    {
       "id": "页面2：管理",
       "isDefault": false
     },
