@@ -439,9 +439,7 @@
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "Meeting_Detail_Update_Meeting_Info",
               "name": "Update_Meeting_Info",
@@ -460,7 +458,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                " appsmith.URL.params.bookingId "
+                "appsmith.URL.queryParams.bookingId"
               ],
               "timeoutInMillisecond": 10000
             },

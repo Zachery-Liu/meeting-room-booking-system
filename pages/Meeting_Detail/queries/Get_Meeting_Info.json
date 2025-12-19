@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM meeting_info \nWHERE booking_id = {{ appsmith.URL.params.bookingId }};",
+      "body": "SELECT * FROM Meeting_Info WHERE booking_id = '{{appsmith.URL.queryParams.bookingId}}';",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      " appsmith.URL.params.bookingId "
+      "appsmith.URL.queryParams.bookingId"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
