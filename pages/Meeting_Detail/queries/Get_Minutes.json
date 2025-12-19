@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT content FROM meeting_minutes\nWHERE meeting_info_id = (\n  SELECT meeting_info_id FROM meeting_info \n  WHERE booking_id = {{ appsmith.URL.params.bookingId }}\n)\nORDER BY created_at DESC\nLIMIT 1;",
+      "body": "",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,19 +26,13 @@
         }
       ]
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      " appsmith.URL.params.bookingId "
-    ],
-    "userSetOnLoad": false,
+    "jsonPathKeys": [],
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []

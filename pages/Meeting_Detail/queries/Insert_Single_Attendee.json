@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO meeting_attendees (meeting_info_id, user_id, invite_status, is_required)\nVALUES (\n  (SELECT meeting_info_id FROM meeting_info WHERE booking_id = {{ appsmith.URL.params.bookingId }}),\n  {{ user_id }},\n  'pending',\n  false\n)\nON DUPLICATE KEY UPDATE invite_status = 'pending';",
+      "body": "SELECT \"模拟邀请参会人成功\" AS result;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -27,18 +27,11 @@
       ]
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      " appsmith.URL.params.bookingId ",
-      " user_id "
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

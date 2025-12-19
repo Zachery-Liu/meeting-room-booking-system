@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun2",
-    "fullyQualifiedName": "JSObject5.myFun2",
+    "name": "initPage",
+    "fullyQualifiedName": "main.initPage",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,19 +13,18 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "注册页面",
-    "collectionId": "注册页面_JSObject5",
+    "pageId": "Meeting_Detail",
+    "collectionId": "Meeting_Detail_main",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {}",
+      "body": "() => {\n  showAlert(\"页面初始化成功\", \"success\");\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {}"
+      "() => {\n  showAlert(\"页面初始化成功\", \"success\");\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "注册页面_JSObject5.myFun2",
+  "id": "Meeting_Detail_main.initPage",
   "deleted": false,
-  "gitSyncId": "692af5888fc1e0541ea208a0_694107e48fc1e0541ea20a23"
+  "gitSyncId": "692af5888fc1e0541ea208a0_6944a8b278bb7c4683cb70fa"
 }

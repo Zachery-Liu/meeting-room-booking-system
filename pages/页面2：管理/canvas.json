@@ -540,7 +540,7 @@
               "shouldScrollContents": true,
               "animateLoading": true,
               "parentColumnSpace": 15.90625,
-              "leftColumn": 5,
+              "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
@@ -575,8 +575,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 1,
-                      "bottomRow": 8,
+                      "topRow": 0,
+                      "bottomRow": 7,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -586,7 +586,7 @@
                       "parentColumnSpace": 12.140625,
                       "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
-                      "leftColumn": 2,
+                      "leftColumn": 11,
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
@@ -606,7 +606,7 @@
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
-                      "rightColumn": 12,
+                      "rightColumn": 21,
                       "dynamicHeight": "FIXED",
                       "widgetId": "dqncxwx3ca",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -635,8 +635,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 1,
-                      "bottomRow": 8,
+                      "topRow": 0,
+                      "bottomRow": 7,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -646,7 +646,7 @@
                       "parentColumnSpace": 15.921875,
                       "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
-                      "leftColumn": 14,
+                      "leftColumn": 24,
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
@@ -666,7 +666,7 @@
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
-                      "rightColumn": 25,
+                      "rightColumn": 35,
                       "dynamicHeight": "FIXED",
                       "widgetId": "pt4xpad9ru",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -695,8 +695,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 1,
-                      "bottomRow": 8,
+                      "topRow": 0,
+                      "bottomRow": 7,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -706,7 +706,7 @@
                       "parentColumnSpace": 15.90625,
                       "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
-                      "leftColumn": 27,
+                      "leftColumn": 38,
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
@@ -726,13 +726,13 @@
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
-                      "rightColumn": 38,
+                      "rightColumn": 49,
                       "dynamicHeight": "FIXED",
                       "widgetId": "q1kmh2i0z4",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "showStepArrows": false,
                       "isVisible": true,
-                      "label": "输入功能",
+                      "label": "输入描述",
                       "version": 2,
                       "parentId": "hggqpu86ft",
                       "labelAlignment": "left",
@@ -797,6 +797,63 @@
                       "originalBottomRow": 63,
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
+                    },
+                    {
+                      "widgetName": "Text3",
+                      "displayName": "文本",
+                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                      "searchTags": [
+                        "typography",
+                        "paragraph",
+                        "label",
+                        "text",
+                        "文字",
+                        "标题",
+                        "段落",
+                        "字符"
+                      ],
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 9.14111328125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "truncateButtonColor"
+                        },
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "text": "添加楼",
+                      "key": "83stvgluqk",
+                      "isDeprecated": false,
+                      "rightColumn": 8,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "AUTO_HEIGHT",
+                      "widgetId": "b5xtg9cy5n",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "hggqpu86ft",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1rem",
+                      "minDynamicHeight": 4
                     }
                   ],
                   "key": "e14g4l07sg",

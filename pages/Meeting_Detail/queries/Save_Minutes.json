@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO meeting_minutes (meeting_info_id, content, created_by_user_id)\nVALUES (\n  (SELECT meeting_info_id FROM meeting_info WHERE booking_id = {{ appsmith.URL.params.booking_id }}),\n  {{ minutesContent.text }},\n  {{ appsmith.store.user_id }}\n);",
+      "body": "SELECT \"模拟保存纪要成功\" AS result;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -27,19 +27,11 @@
       ]
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      " appsmith.URL.params.booking_id ",
-      " appsmith.store.user_id ",
-      " minutesContent.text "
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

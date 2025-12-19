@@ -59,6 +59,12 @@
                 },
                 {
                   "key": "primaryColumns.customColumn3.boxShadow"
+                },
+                {
+                  "key": "primaryColumns.customColumn5.borderRadius"
+                },
+                {
+                  "key": "primaryColumns.customColumn5.boxShadow"
                 }
               ],
               "needsHeightForContent": true,
@@ -97,7 +103,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1765804734671,
+              "columnUpdatedAt": 1766106351484,
               "primaryColumnId": "booking_id",
               "defaultSelectedRowIndices": [
                 0
@@ -112,6 +118,7 @@
                 "end_time",
                 "status_text",
                 "status_code",
+                "customColumn5",
                 "customColumn3",
                 "customColumn2",
                 "customColumn1"
@@ -134,6 +141,9 @@
                 },
                 {
                   "key": "primaryColumns.customColumn2.onClick"
+                },
+                {
+                  "key": "primaryColumns.customColumn5.onClick"
                 }
               ],
               "displayName": "表格",
@@ -150,7 +160,8 @@
                 "status_code": 178,
                 "customColumn2": 82,
                 "customColumn3": 82,
-                "booking_id": 178
+                "booking_id": 178,
+                "customColumn5": 105
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -167,6 +178,9 @@
                 },
                 {
                   "key": "primaryColumns.customColumn3.onClick"
+                },
+                {
+                  "key": "primaryColumns.customColumn5.onClick"
                 }
               ],
               "borderWidth": "1",
@@ -502,6 +516,40 @@
                   "customAlias": "",
                   "iconName": "time",
                   "onClick": "{{\n  (async () => {\n    // 1. 运行查询，获取当前行的日志\n    await Get_Booking_Logs.run();\n    // 2. 打开弹窗\n    showModal('log_modal');\n  })()\n}}"
+                },
+                "customColumn5": {
+                  "allowCellWrapping": false,
+                  "index": 10,
+                  "width": 150,
+                  "originalId": "customColumn5",
+                  "id": "customColumn5",
+                  "alias": "上传纪要",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "iconButton",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "上传纪要",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "",
+                  "sticky": "right",
+                  "validation": {},
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "labelColor": "#FFFFFF",
+                  "buttonColor": "#2563eb",
+                  "borderRadius": "{{Table_MyBookings.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                  "boxShadow": "{{Table_MyBookings.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
+                  "customAlias": "",
+                  "iconName": "add-to-folder",
+                  "onClick": "{{\n  (async () => {\n    // 1. 先把 ID 存入缓存\n    await storeValue('booking_id', Table_MyBookings.triggeredRow.booking_id);\n    \n    // 2. 存完之后，再跳转页面\n    navigateTo('Meeting_Detail');\n  })()\n}}"
                 }
               },
               "key": "lk7hdyj3xr",
@@ -941,22 +989,24 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "我的预定_Get_Booking_Logs",
-              "name": "Get_Booking_Logs",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                " Table_MyBookings.triggeredRow.booking_id "
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "我的预定_Get_My_History",
               "name": "Get_My_History",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
                 " appsmith.store.user_id "
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "我的预定_Get_Booking_Logs",
+              "name": "Get_Booking_Logs",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                " Table_MyBookings.triggeredRow.booking_id "
               ],
               "timeoutInMillisecond": 10000
             }

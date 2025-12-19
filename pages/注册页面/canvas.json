@@ -105,7 +105,7 @@
                       "labelPosition": "Top",
                       "labelStyle": "",
                       "inputType": "TEXT",
-                      "maxChars": "1",
+                      "maxChars": "",
                       "isDisabled": false,
                       "key": "6tkc7jb6o3",
                       "labelTextSize": "0.875rem",

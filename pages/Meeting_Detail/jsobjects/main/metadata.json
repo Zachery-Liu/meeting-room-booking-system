@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "main",
+    "pageId": "Meeting_Detail",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Meeting_Detail_main",
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_6944a8a678bb7c4683cb70f8"
+}

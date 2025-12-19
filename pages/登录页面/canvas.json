@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 490,
+          "bottomRow": 530,
           "containerStyle": "none",
           "snapRows": 77,
           "parentRowSpace": 1,
@@ -38,8 +38,8 @@
                 "group",
                 "container"
               ],
-              "topRow": 20,
-              "bottomRow": 49,
+              "topRow": 24,
+              "bottomRow": 53,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -47,7 +47,7 @@
               "animateLoading": true,
               "parentColumnSpace": 15.953125,
               "dynamicTriggerPathList": [],
-              "leftColumn": 19,
+              "leftColumn": 21,
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
@@ -116,7 +116,7 @@
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "showStepArrows": false,
                       "isVisible": true,
-                      "label": "请输入用户名",
+                      "label": "用户名",
                       "version": 2,
                       "parentId": "1k8pxrz30v",
                       "labelAlignment": "left",
@@ -161,7 +161,7 @@
                       ],
                       "labelPosition": "Top",
                       "labelStyle": "",
-                      "inputType": "TEXT",
+                      "inputType": "PASSWORD",
                       "isDisabled": false,
                       "key": "p2tt4nupaz",
                       "labelTextSize": "0.875rem",
@@ -173,7 +173,7 @@
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "showStepArrows": false,
                       "isVisible": true,
-                      "label": "请输入密码",
+                      "label": "密码",
                       "version": 2,
                       "parentId": "1k8pxrz30v",
                       "labelAlignment": "left",
@@ -189,7 +189,13 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "loginBtn",
+                      "onClick": "{{\n  Query1.run(\n    () => {\n      // 1. 提示登录成功\n      showAlert('登录成功', 'success');\n      \n      // 2. (重要) 将用户信息存入浏览器缓存\n      // 假设 Query1 返回了用户数据，这里把 ID 存起来，供后面页面使用\n      if (Query1.data && Query1.data.length > 0) {\n          storeValue('user_id', Query1.data[0].id);\n          storeValue('username', Query1.data[0].username);\n          storeValue('user_role', Query1.data[0].role); // 如果有角色权限也存一下\n      }\n\n      // 3. 跳转到 '主页'\n      navigateTo('主页');\n    },\n    () => {\n      // 登录失败的回调\n      showAlert('登录失败，请检查用户名或密码', 'error');\n    }\n  )\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "displayName": "按钮",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -204,7 +210,11 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 16.078125,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 43,
                       "dynamicBindingPathList": [
                         {
@@ -359,7 +369,7 @@
               "key": "6w7rwu81t4",
               "backgroundColor": "#FFFFFF",
               "isDeprecated": false,
-              "rightColumn": 43,
+              "rightColumn": 42,
               "dynamicHeight": "FIXED",
               "widgetId": "w84q44kl8k",
               "containerStyle": "card",
@@ -368,9 +378,70 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "originalTopRow": 24,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
+              "originalBottomRow": 53,
               "minDynamicHeight": 10
+            },
+            {
+              "widgetName": "Text2",
+              "displayName": "文本",
+              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+              "searchTags": [
+                "typography",
+                "paragraph",
+                "label",
+                "text",
+                "文字",
+                "标题",
+                "段落",
+                "字符"
+              ],
+              "topRow": 16,
+              "bottomRow": 24,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "parentColumnSpace": 15.953125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 23,
+              "dynamicBindingPathList": [
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "text": "会议室预约管理系统",
+              "key": "bs85mdgapt",
+              "isDeprecated": false,
+              "rightColumn": 41,
+              "textAlign": "CENTER",
+              "dynamicHeight": "AUTO_HEIGHT",
+              "widgetId": "403ybste0y",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "originalTopRow": 16,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "originalBottomRow": 24,
+              "fontSize": "1.875rem",
+              "minDynamicHeight": 4
             }
           ]
         },
