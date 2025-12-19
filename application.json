@@ -1,5 +1,9 @@
 {
   "pages": [
+      {
+      "id": "主页",
+      "isDefault": true
+    },
     {
       "id": "页面2：管理",
       "isDefault": false
