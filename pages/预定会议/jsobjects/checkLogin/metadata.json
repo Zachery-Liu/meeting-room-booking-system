@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "checkLogin",
+    "pageId": "预定会议",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "预定会议_checkLogin",
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_693bb3148fc1e0541ea208fc"
+}
