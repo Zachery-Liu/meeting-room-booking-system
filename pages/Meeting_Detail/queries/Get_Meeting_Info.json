@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "Create_Booking",
+    "name": "Get_Meeting_Info",
     "datasource": {
       "name": "会议室预约管理系统数据库",
       "pluginId": "mysql-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "预定会议",
+    "pageId": "Meeting_Detail",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO booking \n(booking_id, user_id, room_id, status_code, subject, start_time, end_time)\nVALUES (\n  '{{ \"B\" + moment().format(\"YYYYMMDDHHmmss\") }}',  -- 字符串类型加单引号\n  1,\n  {{ appsmith.store.target_room_id }},\n  0,\n  '{{ input_subject.text }}',  -- 字符串类型加单引号\n  '{{ date_start.formattedDate }}',  -- 字符串类型加单引号\n  '{{ date_end.formattedDate }}'     -- 字符串类型加单引号\n);\nSELECT LAST_INSERT_ID() AS LAST_INSERT_ID;",
+      "body": "SELECT * FROM meeting_info \nWHERE booking_id = {{ appsmith.URL.params.bookingId }};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -36,18 +36,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      " \"B\" + moment().format(\"YYYYMMDDHHmmss\") ",
-      " appsmith.store.target_room_id ",
-      " date_end.formattedDate ",
-      " date_start.formattedDate ",
-      " input_subject.text "
+      " appsmith.URL.params.bookingId "
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "预定会议_Create_Booking",
+  "id": "Meeting_Detail_Get_Meeting_Info",
   "deleted": false,
-  "gitSyncId": "692af5888fc1e0541ea208a0_692bb9c68fc1e0541ea208ca"
+  "gitSyncId": "692af5888fc1e0541ea208a0_69421cba806f8a4c1c71bbbd"
 }

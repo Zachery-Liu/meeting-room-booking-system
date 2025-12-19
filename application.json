@@ -2,30 +2,46 @@
   "pages": [
     {
       "id": "主页",
-      "isDefault": true
+      "isDefault": false
     },
     {
       "id": "预定会议",
       "isDefault": false
     },
     {
-      "id": "页面1",
+      "id": "页面2：管理",
       "isDefault": false
     },
     {
-      "id": "页面2",
+      "id": "提交反馈",
       "isDefault": false
     },
     {
-      "id": "反馈",
+      "id": "注册页面",
       "isDefault": false
     },
     {
-      "id": "页面3",
+      "id": "反馈列表",
       "isDefault": false
     },
     {
-      "id": "用户-我的反馈列表",
+      "id": "维保列表",
+      "isDefault": false
+    },
+    {
+      "id": "Meeting_Detail",
+      "isDefault": false
+    },
+    {
+      "id": "登录页面",
+      "isDefault": true
+    },
+    {
+      "id": "页面5：管理",
+      "isDefault": false
+    },
+    {
+      "id": "提交维保",
       "isDefault": false
     }
   ],

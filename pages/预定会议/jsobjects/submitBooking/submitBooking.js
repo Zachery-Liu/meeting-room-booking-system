@@ -19,25 +19,34 @@ export default {
 
         try {
             // 3. 【核心算法】提交前再做一次冲突检测 (Double Check)
-            // 防止：你在填单子的时候，别人正好抢先把这个房间订了
             const conflictCheck = await Check_Conflict.run(); 
-            
             if (conflictCheck[0].count > 0) {
                 showAlert("下手慢了！该时间段刚才被人抢订了，请换个时间。", "error");
-                return; // 终止流程
+                return; 
             }
 
             // 4. 【执行写入】如果没有冲突，正式写入数据库
-            await Create_Booking.run(); 
+            // 新增：接收 Create_Booking 返回的 bookingId
+            const bookingResult = await Create_Booking.run(); 
             
             // 5. (可选) 写入日志，凑够3张表工作量
             // await Log_Action.run(); 
 
             // 6. 【UI反馈】成功的收尾工作
             showAlert("预约提交成功！", "success");
-            closeModal("New_Modal");      // 关掉弹窗
-            await Search_Rooms.run();     // 【关键】刷新外面的查询列表，让那个房间变红
-            
+            closeModal("New_Modal");      
+            await Search_Rooms.run();     
+
+            // --------------------------
+            // 新增核心代码（仅4行）：获取bookingId并跳转
+            // --------------------------
+            // 取新生成的bookingId（适配MySQL，PostgreSQL改bookingResult[0]?.booking_id）
+            const bookingId = bookingResult[0]?.LAST_INSERT_ID; 
+            if (bookingId) {
+                navigateTo("Meeting_Detail", { bookingId: bookingId }); // 替换成你的页面名
+            }
+            // --------------------------
+
         } catch (error) {
             // 兜底错误处理
             showAlert("提交失败：" + error.message, "error");
