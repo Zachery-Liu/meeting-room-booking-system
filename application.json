@@ -71,6 +71,10 @@
     {
       "id": "账号设置",
       "isDefault": false
+    },
+    {
+      "id": "预定会议",
+      "isDefault": false
     }
   ],
   "viewMode": false,
