@@ -71,6 +71,18 @@
     {
       "id": "账号设置",
       "isDefault": false
+    },
+    {
+      "id": "预定会议",
+      "isDefault": false
+    },
+    {
+      "id": "角色管理",
+      "isDefault": false
+    },
+    {
+      "id": "部门管理",
+      "isDefault": false
     }
   ],
   "viewMode": false,

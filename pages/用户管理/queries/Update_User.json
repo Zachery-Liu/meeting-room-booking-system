@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "-- 1. 更新用户基础信息 (姓名、部门、手机、邮箱等)\nUPDATE user \nSET \n    real_name = {{Input_User_RealName.text}}, \n    phone = {{Input_User_Phone.text}}, \n    email = {{Input_User_Email.text}},\n    dept_id = {{Select_User_Dept.selectedOptionValue}},\n    update_time = NOW() -- 记录更新时间\nWHERE id = {{Table_Pending.triggeredRow.id}}; -- 核心：只更新表格选中的那个人\n\n-- 2. 更新用户角色\n-- 这里假设每个用户只有一个主角色，直接覆盖更新\nUPDATE user_role_map\nSET role_id = {{Select_User_Role.selectedOptionValue}}\nWHERE user_id = {{Table_Pending.triggeredRow.id}};",
+      "body": "-- 1. 更新用户基础信息 (姓名、部门、手机、邮箱等)\nUPDATE user \nSET \n    real_name = {{Input_User_RealName.text}}, \n    phone = {{PhoneInput1.value}}, \n    email = {{Input_User_Email.text}},\n    dept_id = {{Select_User_Dept.selectedOptionValue}},\n    update_time = NOW() -- 记录更新时间\nWHERE id = {{Table_Pending.triggeredRow.id}}; -- 核心：只更新表格选中的那个人\n\n-- 2. 更新用户角色\n-- 这里假设每个用户只有一个主角色，直接覆盖更新\nUPDATE user_role_map\nSET role_id = {{Select_User_Role.selectedOptionValue}}\nWHERE user_id = {{Table_Pending.triggeredRow.id}};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -37,8 +37,8 @@
     "messages": [],
     "jsonPathKeys": [
       "Input_User_Email.text",
-      "Input_User_Phone.text",
       "Input_User_RealName.text",
+      "PhoneInput1.value",
       "Select_User_Dept.selectedOptionValue",
       "Select_User_Role.selectedOptionValue",
       "Table_Pending.triggeredRow.id"

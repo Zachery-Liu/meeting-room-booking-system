@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "DeptJS",
+    "pageId": "部门管理",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "部门管理_DeptJS",
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_694665044f1d584d942c751e"
+}

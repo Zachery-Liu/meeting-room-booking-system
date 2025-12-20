@@ -754,6 +754,7 @@
               "isDeprecated": false,
               "rightColumn": 16,
               "isDefaultClickDisabled": true,
+              "iconName": "add",
               "widgetId": "biap5wjm7p",
               "isVisible": true,
               "recaptchaType": "V3",
@@ -764,6 +765,7 @@
               "disabledWhenInvalid": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "buttonVariant": "PRIMARY",
+              "iconAlign": "left",
               "placement": "CENTER"
             },
             {

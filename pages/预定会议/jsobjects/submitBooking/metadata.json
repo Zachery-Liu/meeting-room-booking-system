@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "submitBooking",
+    "pageId": "预定会议",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "预定会议_submitBooking",
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_69465a5c4f1d584d942c74ac"
+}

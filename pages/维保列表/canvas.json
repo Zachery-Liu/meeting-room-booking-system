@@ -850,7 +850,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "",
+                      "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( appsmith.store.user_id))(AdminDropdown.options, AdminDropdown.serverSideFiltering) }}",
                       "animateLoading": true,
                       "parentColumnSpace": 6.5,
                       "dynamicTriggerPathList": [],
@@ -864,12 +864,15 @@
                         },
                         {
                           "key": "options"
+                        },
+                        {
+                          "key": "defaultOptionValue"
                         }
                       ],
                       "labelPosition": "Top",
                       "options": "{{getAllUsers.data.map(user => ({label: user.real_name, value: user.id}))}}",
                       "placeholderText": "请选择",
-                      "isDisabled": false,
+                      "isDisabled": true,
                       "key": "quete3scyx",
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
@@ -1088,7 +1091,7 @@
               "originalTopRow": 1,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 77,
+              "originalBottomRow": 75,
               "minDynamicHeight": 10
             }
           ]

@@ -24,13 +24,11 @@ export default {
             await storeValue('role_code', user.role_code); 
 
             // =================================================
-            // 第三步：【核心修正】获取权限
+            // 第三步：获取权限
             // =================================================
-            // 必须加 await！否则还没查回来你就去 map，必挂无疑
-            // 这里假设 Query3 里的 SQL 引用了 {{appsmith.store.role_code}}
             const permsData = await Query3.run();
 
-            // 防御性编程：万一该角色没有任何权限，给个空数组
+            // 角色没有任何权限空数组
             const permArray = (permsData || []).map(item => item.perm_code);
 
             // 存入全局权限 (第三个参数 true 表示持久化)
