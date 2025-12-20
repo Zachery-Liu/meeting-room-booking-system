@@ -7,18 +7,6 @@
     {
       "id": "预定会议",
       "isDefault": false
-    },
-    {
-      "id": "会议管理（管理员）",
-      "isDefault": false
-    },
-    {
-      "id": "我的预定",
-      "isDefault": false
-    },
-    {
-      "id": "登录页面",
-      "isDefault": false
     }
   ],
   "viewMode": false,
