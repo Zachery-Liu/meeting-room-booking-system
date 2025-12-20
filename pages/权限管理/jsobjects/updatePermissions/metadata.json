@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "updatePermissions",
+    "pageId": "权限管理",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "权限管理_updatePermissions",
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_6945088e78bb7c4683cb714a"
+}

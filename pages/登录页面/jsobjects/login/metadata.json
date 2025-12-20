@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "login",
+    "pageId": "登录页面",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "登录页面_login",
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_694639924f1d584d942c73fc"
+}

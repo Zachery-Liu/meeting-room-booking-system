@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "-- 校验用户名+加密密码+用户状态\nSELECT u.*, d.dept_name \nFROM user  u\nLEFT JOIN department d ON u.dept_id = d.id\nWHERE \n  u.username = {{usernameInput.text}} \n  AND u.password = MD5({{passwordInput.text}}) \n  AND u.status = 1; -- 仅启用状态用户可登录",
+      "body": "SELECT \n  u.*, \n  d.dept_name,\n  r.role_code,   -- 【关键】获取角色代码 (如 ADMIN)\n  r.role_name    -- 【可选】获取角色中文名 (如 管理员)\nFROM user u\n-- 1. 关联部门\nLEFT JOIN department d ON u.dept_id = d.id\n-- 2. 关联中间表 (user_role)\nLEFT JOIN user_role_map ur ON u.id = ur.user_id\n-- 3. 关联角色表 (role)\nLEFT JOIN role r ON ur.role_id = r.id\nWHERE \n  u.username = {{usernameInput.text}} \n  AND u.password = MD5({{passwordInput.text}}) \n  AND u.status = 1;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

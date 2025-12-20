@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "pageInti",
+    "pageId": "维保列表",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "维保列表_pageInti",
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_6945192364538b7b618919d5"
+}

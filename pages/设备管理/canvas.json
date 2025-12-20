@@ -1,0 +1,58 @@
+{
+  "unpublishedPage": {
+    "name": "设备管理",
+    "slug": "",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 800,
+          "containerStyle": "none",
+          "snapRows": 79,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 77,
+          "minHeight": 810,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": []
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "设备管理_pageInti.initPage",
+              "name": "pageInti.initPage",
+              "collectionId": "设备管理_pageInti",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  if (!appsmith.store.user_id || !appsmith.store.GLOBAL_PERMS) {\n    showAlert(\"会话已过期或未登录，请重新登录！\", \"warning\");\n    navigateTo('登录页面');\n    return;\n  }\n  const currentContextPerm = 'MANAGE:EQUIPEMENTS';\n  const myPerms = appsmith.store.GLOBAL_PERMS || [];\n  if (!myPerms.includes(currentContextPerm)) {\n    showAlert('权限不足：您无权访问此页面', 'error');\n    navigateTo('主页');\n    return;\n  }\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "设备管理",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_6944fe3378bb7c4683cb7132"
+}

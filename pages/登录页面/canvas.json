@@ -26,6 +26,66 @@
           "leftColumn": 0,
           "children": [
             {
+              "resetFormOnClick": false,
+              "boxShadow": "none",
+              "widgetName": "Button3",
+              "onClick": "{{\nstoreValue('user_id','88888');\nstoreValue('username', '测试管理员');\n}}",
+              "buttonColor": "#facc15",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onClick"
+                },
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "displayName": "按钮",
+              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+              "searchTags": [
+                "click",
+                "submit",
+                "button"
+              ],
+              "topRow": 7,
+              "bottomRow": 11,
+              "parentRowSpace": 10,
+              "type": "BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.140625,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 1,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "text": "测试用按钮 获得UID 88888",
+              "isDisabled": false,
+              "key": "73y4t2wrvk",
+              "isDeprecated": false,
+              "rightColumn": 20,
+              "isDefaultClickDisabled": true,
+              "widgetId": "afc1wwjy9s",
+              "isVisible": "{{ appsmith.mode === 'EDIT' }}",
+              "recaptchaType": "V3",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "disabledWhenInvalid": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "buttonVariant": "PRIMARY",
+              "placement": "CENTER"
+            },
+            {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "widgetName": "Container1",
               "borderColor": "#E0DEDE",
@@ -122,8 +182,10 @@
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 6,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 13,
                       "iconAlign": "left",
                       "defaultText": "",
                       "minDynamicHeight": 4
@@ -179,8 +241,10 @@
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 13,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 20,
                       "iconAlign": "left",
                       "defaultText": "",
                       "minDynamicHeight": 4
@@ -189,13 +253,9 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "loginBtn",
-                      "onClick": "{{\n  Query1.run(\n    () => {\n      // 1. 提示登录成功\n      showAlert('登录成功', 'success');\n      \n      // 2. (重要) 将用户信息存入浏览器缓存\n      // 假设 Query1 返回了用户数据，这里把 ID 存起来，供后面页面使用\n      if (Query1.data && Query1.data.length > 0) {\n          storeValue('user_id', Query1.data[0].id);\n          storeValue('username', Query1.data[0].username);\n          storeValue('user_role', Query1.data[0].role); // 如果有角色权限也存一下\n      }\n\n      // 3. 跳转到 '主页'\n      navigateTo('主页');\n    },\n    () => {\n      // 登录失败的回调\n      showAlert('登录失败，请检查用户名或密码', 'error');\n    }\n  )\n}}",
+                      "onClick": "{{login.doLogin()}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "onClick"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "按钮",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -237,8 +297,10 @@
                       "parentId": "1k8pxrz30v",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 23,
                       "disabledWhenInvalid": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 27,
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
@@ -294,8 +356,10 @@
                       "parentId": "1k8pxrz30v",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 1,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 5,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
                     },
@@ -303,7 +367,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button1",
-                      "onClick": "{{navigateTo('', {}, 'SAME_WINDOW')}}",
+                      "onClick": "{{navigateTo('注册页面', {}, 'SAME_WINDOW')}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "按钮",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -346,8 +410,10 @@
                       "parentId": "1k8pxrz30v",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 23,
                       "disabledWhenInvalid": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 27,
                       "buttonVariant": "TERTIARY",
                       "placement": "CENTER"
                     }

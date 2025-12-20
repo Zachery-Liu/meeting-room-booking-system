@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 550,
+          "bottomRow": 890,
           "containerStyle": "none",
           "snapRows": 87,
           "parentRowSpace": 1,
@@ -147,7 +147,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "",
+                      "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( appsmith.store.user_id))(AdminDropdown.options, AdminDropdown.serverSideFiltering) }}",
                       "animateLoading": true,
                       "parentColumnSpace": 21.640625,
                       "dynamicTriggerPathList": [],
@@ -161,12 +161,15 @@
                         },
                         {
                           "key": "options"
+                        },
+                        {
+                          "key": "defaultOptionValue"
                         }
                       ],
                       "labelPosition": "Top",
                       "options": "{{getAllUsers.data.map(user => ({label: user.real_name, value: user.id}))}}",
                       "placeholderText": "请选择",
-                      "isDisabled": false,
+                      "isDisabled": true,
                       "key": "to867imx6y",
                       "labelTextSize": "0.875rem",
                       "isRequired": false,

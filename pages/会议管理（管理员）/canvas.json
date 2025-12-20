@@ -2653,6 +2653,17 @@
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "会议管理（管理员）_checkLogin.initPage",
+              "name": "checkLogin.initPage",
+              "collectionId": "会议管理（管理员）_checkLogin",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  if (!appsmith.store.user_id || !appsmith.store.GLOBAL_PERMS) {\n    showAlert(\"会话已过期或未登录，请重新登录！\", \"warning\");\n    navigateTo('登录页面');\n    return;\n  }\n  const currentContextPerm = 'MANAGE:MEETING';\n  const myPerms = appsmith.store.GLOBAL_PERMS || [];\n  if (!myPerms.includes(currentContextPerm)) {\n    showAlert('权限不足：您无权访问此页面', 'error');\n    navigateTo('主页');\n    return;\n  }\n}"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ],
           [

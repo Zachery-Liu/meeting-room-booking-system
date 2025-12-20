@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "pageInti",
+    "pageId": "设备管理",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "设备管理_pageInti",
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_69451a1464538b7b61891a05"
+}

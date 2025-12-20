@@ -347,7 +347,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "欢迎回来 {{ appsmith.store.user_name || '用户' + appsmith.store.user_id }}",
+                      "text": "欢迎回来 {{ appsmith.store.username || '用户' + appsmith.store.user_id }}",
                       "key": "6r4rvdtc00",
                       "isDeprecated": false,
                       "rightColumn": 60,

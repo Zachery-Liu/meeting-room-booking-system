@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "pageInti",
+    "pageId": "账号设置",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "账号设置_pageInti",
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_694642a54f1d584d942c7419"
+}

@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "pageInti",
+    "pageId": "楼的管理",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "楼的管理_pageInti",
+  "deleted": false,
+  "gitSyncId": "692af5888fc1e0541ea208a0_6945187c64538b7b618919c1"
+}

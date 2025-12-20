@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO user\n(\n  username, \n  password, \n  real_name, \n  email, \n  dept_id, \n  phone, \n  status, \n  create_time, \n  update_time\n)\nVALUES\n(\n  {{usernameInput.text}}, -- 用户名（和校验Query参数完全一致）\n  MD5({{passwordInput.text}}), -- 密码加密，避免明文\n  {{nameInput.text}}, -- 真实姓名\n  {{emailInput.text}}, -- 邮箱\n  {{deptIdDropdown.selectedOptionValue}}, -- 部门ID（下拉框值）\n  {{phoneInput.text}}, -- 手机号\n  1, -- 状态固定启用\n  NOW(), -- 自动填创建时间\n  NOW() -- 自动填更新时间\n);",
+      "body": "-- 1. 插入用户基础信息\nINSERT INTO user\n(\n  username, \n  password, \n  real_name, \n  email, \n  dept_id, \n  phone, \n  status, \n  create_time, \n  update_time\n)\nVALUES\n(\n  {{usernameInput.text}}, \n  MD5({{passwordInput.text}}), \n  {{nameInput.text}}, \n  {{emailInput.text}}, \n  {{deptIdDropdown.selectedOptionValue}}, \n  {{phoneInput.value}}, \n  1, \n  NOW(), \n  NOW()\n);\n\n-- 2. 紧接着插入角色关联 (核心修改)\n-- 使用 LAST_INSERT_ID() 自动获取上面刚生成的 user.id\n-- 假设 '3' 是访客角色的 ID，请根据第一步的结果修改这个数字\nINSERT INTO user_role_map (user_id, role_id)\nVALUES (LAST_INSERT_ID(), 3);",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -40,7 +40,7 @@
       "emailInput.text",
       "nameInput.text",
       "passwordInput.text",
-      "phoneInput.text",
+      "phoneInput.value",
       "usernameInput.text"
     ],
     "userSetOnLoad": false,

@@ -5,7 +5,7 @@
       "isDefault": true
     },
     {
-      "id": "页面2：管理",
+      "id": "楼的管理",
       "isDefault": false
     },
     {
@@ -33,7 +33,7 @@
       "isDefault": true
     },
     {
-      "id": "页面5：管理",
+      "id": "层的管理",
       "isDefault": false
     },
     {
@@ -51,6 +51,26 @@
     {
       "id": "登录页面",
       "isDefault": false
+    },
+    {
+      "id": "会议室管理",
+      "isDefault": false
+    },
+    {
+      "id": "用户管理",
+      "isDefault": false
+    },
+    {
+      "id": "权限管理",
+      "isDefault": false
+    },
+    {
+      "id": "设备管理",
+      "isDefault": false
+    },
+    {
+      "id": "账号设置",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -65,7 +85,11 @@
   "publishedAppLayout": {
     "type": "FLUID"
   },
-  "unpublishedCustomJSLibs": [],
+  "unpublishedCustomJSLibs": [
+    {
+      "uidString": "md5_https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"
+    }
+  ],
   "publishedCustomJSLibs": [],
   "evaluationVersion": 2,
   "applicationVersion": 2,
@@ -76,6 +100,6 @@
   },
   "collapseInvisibleWidgets": true,
   "isManualUpdate": false,
-  "viewerLayout": "{\"color\":\"#166534\",\"logoUrl\":\"https://cdn.jsdelivr.net/gh/Zachery-Liu/chore@main/2205593ZFkd12ZPNx7hLeO.png\",\"name\":\"会议室预约管理系统\",\"treeData\":[{\"title\":\"主页\",\"pageId\":\"692afaed8fc1e0541ea208c4\",\"isPage\":true,\"icon\":\"wap-home-o\"},{\"title\":\"预定会议\",\"pageId\":\"692af5888fc1e0541ea208a3\",\"isPage\":true,\"icon\":\"add-o\"},{\"title\":\"我的预定\",\"pageId\":\"693e7c8e8fc1e0541ea20942\",\"isPage\":true,\"icon\":\"calendar-o\"},{\"title\":\"管理员审批页面\",\"pageId\":\"693e74898fc1e0541ea20939\",\"isPage\":true,\"icon\":\"setting\"}],\"outsiderTree\":[]}",
+  "viewerLayout": "{\"color\":\"#166534\",\"logoUrl\":\"https://cdn.jsdelivr.net/gh/Zachery-Liu/chore@main/2205593ZFkd12ZPNx7hLeO.png\",\"name\":\"会议室预约管理系统\",\"treeData\":[{\"title\":\"主页\",\"pageId\":\"692afaed8fc1e0541ea208c4\",\"isPage\":true,\"icon\":\"wap-home-o\"},{\"title\":\"会议管理\",\"expanded\":true,\"children\":[{\"title\":\"我的预定\",\"pageId\":\"693e7c8e8fc1e0541ea20942\",\"isPage\":true,\"icon\":\"calendar-o\"},{\"title\":\"会议管理（管理员）\",\"pageId\":\"693e74898fc1e0541ea20939\",\"isPage\":true}]},{\"title\":\"空间与资源管理\",\"expanded\":true,\"children\":[{\"title\":\"楼的管理\",\"pageId\":\"693bb1a08fc1e0541ea208f7\",\"isPage\":true},{\"title\":\"层的管理\",\"pageId\":\"694225fa806f8a4c1c71bbd8\",\"isPage\":true},{\"title\":\"会议室管理\",\"pageId\":\"6944f0ef78bb7c4683cb711a\",\"isPage\":true},{\"title\":\"设备管理\",\"pageId\":\"6944fe3378bb7c4683cb7133\",\"isPage\":true}]},{\"title\":\"用户与权限管理\",\"expanded\":true,\"children\":[{\"title\":\"用户管理\",\"pageId\":\"6944f12078bb7c4683cb711d\",\"isPage\":true},{\"title\":\"权限管理\",\"pageId\":\"6944fca878bb7c4683cb7130\",\"isPage\":true}]},{\"title\":\"反馈与维保\",\"expanded\":true,\"children\":[{\"title\":\"提交反馈\",\"pageId\":\"693fb05c8fc1e0541ea20960\",\"isPage\":true},{\"title\":\"反馈列表\",\"pageId\":\"6940c3c58fc1e0541ea209fd\",\"isPage\":true,\"expanded\":true},{\"title\":\"提交维保\",\"pageId\":\"6942cb0f806f8a4c1c71bbef\",\"isPage\":true,\"expanded\":true},{\"title\":\"维保列表\",\"pageId\":\"69417d838fc1e0541ea20a34\",\"isPage\":true,\"expanded\":true}]},{\"title\":\"会议纪要上传\",\"expanded\":true,\"children\":[{\"title\":\"Meeting_Detail\",\"pageId\":\"69420f62806f8a4c1c71bba0\",\"isPage\":true}]}],\"outsiderTree\":[]}",
   "deleted": false
 }

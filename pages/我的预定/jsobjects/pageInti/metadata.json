@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "pageInti",
+    "pageId": "我的预定",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "我的预定_pageInti",
+  "deleted": false,
+  "gitSyncId": "693e53428fc1e0541ea2091c_6940027c8fc1e0541ea209d7"
+}
