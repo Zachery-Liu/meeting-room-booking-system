@@ -36,8 +36,8 @@
                 "group",
                 "form"
               ],
-              "topRow": 11,
-              "bottomRow": 50,
+              "topRow": 0,
+              "bottomRow": 39,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
@@ -358,78 +358,18 @@
               "key": "hrkx65seef",
               "backgroundColor": "#FFFFFF",
               "isDeprecated": false,
-              "rightColumn": 14,
+              "rightColumn": 15,
               "dynamicHeight": "AUTO_HEIGHT",
               "widgetId": "vme77252u3",
               "isVisible": true,
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "originalTopRow": 11,
+              "originalTopRow": 0,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 50,
+              "originalBottomRow": 39,
               "minDynamicHeight": 10
-            },
-            {
-              "resetFormOnClick": false,
-              "boxShadow": "none",
-              "widgetName": "Button3",
-              "onClick": "{{storeValue('user_id','88888')}}",
-              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-              "dynamicPropertyPathList": [
-                {
-                  "key": "isVisible"
-                }
-              ],
-              "displayName": "按钮",
-              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
-              "searchTags": [
-                "click",
-                "submit",
-                "button"
-              ],
-              "topRow": 5,
-              "bottomRow": 9,
-              "parentRowSpace": 10,
-              "type": "BUTTON_WIDGET",
-              "hideCard": false,
-              "animateLoading": true,
-              "parentColumnSpace": 13.703125,
-              "dynamicTriggerPathList": [
-                {
-                  "key": "onClick"
-                }
-              ],
-              "leftColumn": 0,
-              "dynamicBindingPathList": [
-                {
-                  "key": "buttonColor"
-                },
-                {
-                  "key": "borderRadius"
-                },
-                {
-                  "key": "isVisible"
-                }
-              ],
-              "text": "ID88888",
-              "isDisabled": false,
-              "key": "4tz9umshjo",
-              "isDeprecated": false,
-              "rightColumn": 13,
-              "isDefaultClickDisabled": true,
-              "widgetId": "hdybv281jg",
-              "isVisible": "{{ appsmith.mode === 'EDIT' }}",
-              "recaptchaType": "V3",
-              "version": 1,
-              "parentId": "0",
-              "renderMode": "CANVAS",
-              "isLoading": false,
-              "disabledWhenInvalid": false,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "buttonVariant": "PRIMARY",
-              "placement": "CENTER"
             },
             {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
@@ -443,27 +383,6 @@
               "animateLoading": true,
               "dynamicBindingPathList": [
                 {
-                  "key": "primaryColumns.step.computedValue"
-                },
-                {
-                  "key": "primaryColumns.task.computedValue"
-                },
-                {
-                  "key": "primaryColumns.status.computedValue"
-                },
-                {
-                  "key": "primaryColumns.action.computedValue"
-                },
-                {
-                  "key": "primaryColumns.action.buttonColor"
-                },
-                {
-                  "key": "primaryColumns.action.borderRadius"
-                },
-                {
-                  "key": "primaryColumns.action.boxShadow"
-                },
-                {
                   "key": "accentColor"
                 },
                 {
@@ -471,10 +390,40 @@
                 },
                 {
                   "key": "boxShadow"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.feedback_id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.meeting_room_id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.user_id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.username.computedValue"
+                },
+                {
+                  "key": "primaryColumns.feedback_content.computedValue"
+                },
+                {
+                  "key": "primaryColumns.feedback_time.computedValue"
+                },
+                {
+                  "key": "primaryColumns.handle_status.computedValue"
+                },
+                {
+                  "key": "primaryColumns.handle_note.computedValue"
                 }
               ],
               "needsHeightForContent": true,
-              "leftColumn": 14,
+              "leftColumn": 15,
               "delimiter": ",",
               "defaultSelectedRowIndex": 0,
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -508,17 +457,22 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1766105718847,
+              "columnUpdatedAt": 1766222134383,
               "defaultSelectedRowIndices": [
                 0
               ],
               "widgetName": "Table1",
               "defaultPageSize": 0,
               "columnOrder": [
-                "step",
-                "task",
-                "status",
-                "action"
+                "feedback_id",
+                "meeting_room_id",
+                "name",
+                "user_id",
+                "username",
+                "feedback_content",
+                "feedback_time",
+                "handle_status",
+                "handle_note"
               ],
               "dynamicPropertyPathList": [],
               "displayName": "表格",
@@ -535,100 +489,269 @@
               "parentRowSpace": 10,
               "hideCard": false,
               "parentColumnSpace": 15.953125,
+              "dynamicTriggerPathList": [],
               "borderWidth": "1",
               "primaryColumns": {
-                "step": {
+                "feedback_id": {
+                  "allowCellWrapping": false,
                   "index": 0,
                   "width": 150,
-                  "id": "step",
-                  "originalId": "step",
-                  "alias": "step",
+                  "originalId": "feedback_id",
+                  "id": "feedback_id",
+                  "alias": "feedback_id",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "text",
+                  "columnType": "number",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
-                  "isCellVisible": true,
+                  "isDisabled": false,
                   "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
                   "isDerived": false,
-                  "label": "步骤",
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"step\"]))}}",
-                  "validation": {},
+                  "label": "反馈编号",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"feedback_id\"]))}}",
                   "sticky": "",
-                  "labelColor": "#FFFFFF"
+                  "validation": {},
+                  "cellBackground": ""
                 },
-                "task": {
+                "meeting_room_id": {
+                  "allowCellWrapping": false,
                   "index": 1,
                   "width": 150,
-                  "id": "task",
-                  "originalId": "task",
-                  "alias": "task",
+                  "originalId": "meeting_room_id",
+                  "id": "meeting_room_id",
+                  "alias": "meeting_room_id",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "text",
+                  "columnType": "number",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
-                  "isCellVisible": true,
+                  "isDisabled": false,
                   "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
                   "isDerived": false,
-                  "label": "任务",
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
-                  "validation": {},
+                  "label": "会议室编号",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"meeting_room_id\"]))}}",
                   "sticky": "",
-                  "labelColor": "#FFFFFF"
+                  "validation": {},
+                  "cellBackground": ""
                 },
-                "status": {
+                "name": {
+                  "allowCellWrapping": false,
                   "index": 2,
                   "width": 150,
-                  "id": "status",
-                  "originalId": "status",
-                  "alias": "status",
+                  "originalId": "name",
+                  "id": "name",
+                  "alias": "name",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
-                  "isCellVisible": true,
+                  "isDisabled": false,
                   "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
                   "isDerived": false,
-                  "label": "状态",
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
-                  "validation": {},
+                  "label": "会议室名称",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
                   "sticky": "",
-                  "labelColor": "#FFFFFF"
+                  "validation": {},
+                  "cellBackground": ""
                 },
-                "action": {
+                "user_id": {
+                  "allowCellWrapping": false,
                   "index": 3,
                   "width": 150,
-                  "id": "action",
-                  "originalId": "action",
-                  "alias": "action",
+                  "originalId": "user_id",
+                  "id": "user_id",
+                  "alias": "user_id",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "button",
+                  "columnType": "number",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
-                  "isCellVisible": true,
-                  "isCellEditable": false,
                   "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
                   "isDerived": false,
-                  "label": "操作",
-                  "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"action\"]))}}",
-                  "validation": {},
+                  "label": "用户编号",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"user_id\"]))}}",
                   "sticky": "",
-                  "labelColor": "#FFFFFF",
-                  "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                  "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                  "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}"
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "username": {
+                  "allowCellWrapping": false,
+                  "index": 4,
+                  "width": 150,
+                  "originalId": "username",
+                  "id": "username",
+                  "alias": "username",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "用户名",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"username\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "feedback_content": {
+                  "allowCellWrapping": false,
+                  "index": 5,
+                  "width": 150,
+                  "originalId": "feedback_content",
+                  "id": "feedback_content",
+                  "alias": "feedback_content",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "反馈内容",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"feedback_content\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "feedback_time": {
+                  "allowCellWrapping": false,
+                  "index": 6,
+                  "width": 150,
+                  "originalId": "feedback_time",
+                  "id": "feedback_time",
+                  "alias": "feedback_time",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "反馈时间",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"feedback_time\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "handle_status": {
+                  "allowCellWrapping": false,
+                  "index": 7,
+                  "width": 150,
+                  "originalId": "handle_status",
+                  "id": "handle_status",
+                  "alias": "handle_status",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "处理状态",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"handle_status\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "handle_note": {
+                  "allowCellWrapping": false,
+                  "index": 8,
+                  "width": 150,
+                  "originalId": "handle_note",
+                  "id": "handle_note",
+                  "alias": "handle_note",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "处理备注",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"handle_note\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
                 }
               },
               "key": "95zdiwkd6p",
@@ -637,26 +760,7 @@
               "rightColumn": 64,
               "textSize": "0.875rem",
               "widgetId": "4yzgh7z2ss",
-              "tableData": [
-                {
-                  "step": "#1",
-                  "task": "拖拽一个表格组件到画布",
-                  "status": "✅",
-                  "action": ""
-                },
-                {
-                  "step": "#2",
-                  "task": "使用样例数据库创建查询 fetch_users",
-                  "status": "--",
-                  "action": ""
-                },
-                {
-                  "step": "#3",
-                  "task": "通过 fetch_users.data 绑定查询数据",
-                  "status": "--",
-                  "action": ""
-                }
-              ],
+              "tableData": "{{getAllFeedbackList.data}}",
               "label": "数据",
               "searchKey": "",
               "parentId": "0",
@@ -665,11 +769,156 @@
               "isVisibleSearch": true,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
+            },
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "widgetName": "Container1",
+              "borderColor": "#E0DEDE",
+              "isCanvas": true,
+              "displayName": "容器",
+              "iconSVG": "/static/media/icon.1977dca3370505e2db3a8e44cfd54907.svg",
+              "searchTags": [
+                "div",
+                "parent",
+                "group",
+                "container"
+              ],
+              "topRow": 39,
+              "bottomRow": 52,
+              "parentRowSpace": 10,
+              "type": "CONTAINER_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": true,
+              "animateLoading": true,
+              "parentColumnSpace": 12.140625,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                }
+              ],
+              "children": [
+                {
+                  "widgetName": "Canvas3",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 130,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "hideCard": true,
+                  "minHeight": 100,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "widgetName": "Text3",
+                      "displayName": "文本",
+                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                      "searchTags": [
+                        "typography",
+                        "paragraph",
+                        "label",
+                        "text",
+                        "文字",
+                        "标题",
+                        "段落",
+                        "字符"
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 11,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 2.532958984375,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "truncateButtonColor"
+                        },
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "text": "反馈前请先检查是否已有人提交相同反馈 不要重复提交 谢谢！",
+                      "key": "q16k55dalp",
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "textAlign": "CENTER",
+                      "dynamicHeight": "AUTO_HEIGHT",
+                      "widgetId": "de6lfah5sf",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#dc2626",
+                      "version": 1,
+                      "parentId": "g3o5jtet8f",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "originalTopRow": 0,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "originalBottomRow": 7,
+                      "fontSize": "1.25rem",
+                      "minDynamicHeight": 4
+                    }
+                  ],
+                  "key": "k4j9rfx8vh",
+                  "isDeprecated": false,
+                  "rightColumn": 182.109375,
+                  "detachFromLayout": true,
+                  "widgetId": "g3o5jtet8f",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "y5yunf3bug",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
+                }
+              ],
+              "borderWidth": "1",
+              "key": "nkt3fo1j7b",
+              "backgroundColor": "#FFFFFF",
+              "isDeprecated": false,
+              "rightColumn": 15,
+              "dynamicHeight": "AUTO_HEIGHT",
+              "widgetId": "y5yunf3bug",
+              "containerStyle": "card",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "originalTopRow": 39,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "originalBottomRow": 49,
+              "minDynamicHeight": 10
             }
           ]
         },
         "layoutOnLoadActions": [
           [
+            {
+              "id": "提交反馈_getAllFeedbackList",
+              "name": "getAllFeedbackList",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "提交反馈_getAllRooms",
               "name": "getAllRooms",
