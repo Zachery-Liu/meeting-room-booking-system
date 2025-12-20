@@ -1354,7 +1354,7 @@
                                         }
                                       ],
                                       "text": "预约",
-                                      "isDisabled": "{{ \n  // 1. 物品不可用 -> 禁用\n  currentItem.availability !== 'Available' || \n  \n  // 2. 或者：我的权限列表里【没有】预定权限 -> 禁用\n  !appsmith.store.GLOBAL_PERMS?.includes('BTN：CREATE_BOOKING') \n}}",
+                                      "isDisabled": "{{ \n  // 1. 物品不可用 -> 禁用\n  currentItem.availability !== 'Available' || \n  \n  // 2. 或者：我的权限列表里【没有】预定权限 -> 禁用\n  !appsmith.store.GLOBAL_PERMS?.includes('BTN:CREATE_BOOKING') \n}}",
                                       "key": "8qh6a0jt7u",
                                       "isDeprecated": false,
                                       "rightColumn": 58,

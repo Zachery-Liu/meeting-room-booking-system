@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 510,
+          "bottomRow": 500,
           "containerStyle": "none",
           "snapRows": 65,
           "parentRowSpace": 1,
@@ -86,6 +86,12 @@
                 },
                 {
                   "key": "primaryColumns.status.computedValue"
+                },
+                {
+                  "key": "primaryColumns.customColumn1.menuItems.menuItem0k6jawrw0z.isVisible"
+                },
+                {
+                  "key": "primaryColumns.customColumn1.menuItems.menuItemtg9c2vt8vi.isVisible"
                 }
               ],
               "needsHeightForContent": true,
@@ -123,7 +129,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1766128288120,
+              "columnUpdatedAt": 1766223434249,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -142,13 +148,20 @@
                 "status",
                 "customColumn1"
               ],
-              "dynamicPropertyPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "primaryColumns.customColumn1.menuItems.menuItem0k6jawrw0z.isVisible"
+                },
+                {
+                  "key": "primaryColumns.customColumn1.menuItems.menuItemtg9c2vt8vi.isVisible"
+                }
+              ],
               "displayName": "表格",
               "searchTags": [
                 "datagrid",
                 "table"
               ],
-              "bottomRow": 51,
+              "bottomRow": 50,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -163,6 +176,12 @@
                 },
                 {
                   "key": "primaryColumns.customColumn1.menuItems.menuItem0k6jawrw0z.onClick"
+                },
+                {
+                  "key": "primaryColumns.customColumn1.menuItems.menuItemw5u9sblj4t.onClick"
+                },
+                {
+                  "key": "primaryColumns.customColumn1.menuItems.menuItemtg9c2vt8vi.onClick"
                 }
               ],
               "borderWidth": "1",
@@ -378,9 +397,19 @@
                   "menuButtonLabel": "操作",
                   "menuButtoniconName": "wrench",
                   "menuItems": {
+                    "menuItemtg9c2vt8vi": {
+                      "id": "menuItemtg9c2vt8vi",
+                      "index": 0,
+                      "label": "启用用户",
+                      "widgetId": "abkrlrhgpf",
+                      "isDisabled": false,
+                      "isVisible": "{{Table_Pending.processedTableData.map((currentRow, currentIndex) => ( currentRow.status === 0))}}",
+                      "onClick": "{{Enable_User.run(() => Get_All_User.run(), () => showAlert('出错了','error'))}}",
+                      "textColor": "#2563eb"
+                    },
                     "menuItemh03fp7q7fs": {
                       "id": "menuItemh03fp7q7fs",
-                      "index": 0,
+                      "index": 1,
                       "label": "编辑用户",
                       "widgetId": "ajtzao28im",
                       "isDisabled": false,
@@ -389,19 +418,20 @@
                     },
                     "menuItemw5u9sblj4t": {
                       "id": "menuItemw5u9sblj4t",
-                      "index": 1,
+                      "index": 2,
                       "label": "修改密码",
                       "widgetId": "lzseud7v21",
                       "isDisabled": false,
-                      "isVisible": true
+                      "isVisible": true,
+                      "onClick": "{{showModal('Edit_Pwd')}}"
                     },
                     "menuItem0k6jawrw0z": {
                       "id": "menuItem0k6jawrw0z",
-                      "index": 2,
+                      "index": 3,
                       "label": "禁用用户",
                       "widgetId": "v3rwcbut6b",
                       "isDisabled": false,
-                      "isVisible": true,
+                      "isVisible": "{{Table_Pending.processedTableData.map((currentRow, currentIndex) => ( currentRow.status === 1))}}",
                       "onClick": "{{showModal('Modal1')}}",
                       "textColor": "#dc2626"
                     }
@@ -529,7 +559,7 @@
               "key": "50442b51pg",
               "canFreezeColumn": true,
               "isDeprecated": false,
-              "rightColumn": 64,
+              "rightColumn": 63,
               "textSize": "0.875rem",
               "widgetId": "3t3sw3ky43",
               "tableData": "{{Get_All_User.data}}",
@@ -1337,16 +1367,12 @@
                       "minDynamicHeight": 4
                     },
                     {
-                      "resetFormOnClick": false,
+                      "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "Button4",
-                      "onClick": "// 执行更新\nawait Update_Password.run();\n\ncloseModal('Edit_Pwd');\n\n\n// 检查受影响的行数 (affectedRows)\n// 如果旧密码输错了，WHERE 条件不匹配，affectedRows 会是 0\nif (User_Change_Password.data.affectedRows > 0) {\n    showAlert('密码修改成功，请重新登录', 'success');\n    navigateTo('登录页面');\n} else {\n    showAlert('旧密码错误，修改失败', 'error');\n}",
+                      "onClick": "{{changePassword.changePassword()}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "onClick"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "按钮",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [

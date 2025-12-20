@@ -851,6 +851,9 @@
                       "dynamicPropertyPathList": [
                         {
                           "key": "groupButtons.groupButton3.isVisible"
+                        },
+                        {
+                          "key": "groupButtons.groupButtonfhahb88jya.isVisible"
                         }
                       ],
                       "displayName": "按钮组",
@@ -892,6 +895,20 @@
                           "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                           "onClick": "{{navigateTo('我的预定', {}, 'SAME_WINDOW')}}"
                         },
+                        "groupButtontyvm4tfiyp": {
+                          "id": "groupButtontyvm4tfiyp",
+                          "index": 2,
+                          "label": "账号设置",
+                          "menuItems": {},
+                          "buttonType": "SIMPLE",
+                          "placement": "CENTER",
+                          "widgetId": "h1efr8k7cl",
+                          "isDisabled": false,
+                          "isVisible": true,
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "iconName": "settings",
+                          "onClick": "{{navigateTo('账号设置', {}, 'SAME_WINDOW')}}"
+                        },
                         "groupButton3": {
                           "label": "管理员审批",
                           "iconName": "new-drawing",
@@ -899,9 +916,9 @@
                           "buttonType": "SIMPLE",
                           "placement": "CENTER",
                           "widgetId": "",
-                          "isVisible": "true",
+                          "isVisible": "{{  appsmith.store.GLOBAL_PERMS?.includes('MANAGE:MEETING') \n}}",
                           "isDisabled": false,
-                          "index": 2,
+                          "index": 3,
                           "menuItems": {
                             "menuItem1": {
                               "label": "第一项",
@@ -940,6 +957,20 @@
                           },
                           "buttonColor": "#fde047",
                           "onClick": "{{navigateTo('会议管理（管理员）', {},'SAME_WINDOW')}}"
+                        },
+                        "groupButtonfhahb88jya": {
+                          "id": "groupButtonfhahb88jya",
+                          "index": 4,
+                          "label": "维保列表",
+                          "menuItems": {},
+                          "buttonType": "SIMPLE",
+                          "placement": "CENTER",
+                          "widgetId": "rfollxp54o",
+                          "isDisabled": false,
+                          "isVisible": "{{  appsmith.store.GLOBAL_PERMS?.includes('MANAGE:MAINTENANCE') \n}}",
+                          "buttonColor": "#2563eb",
+                          "iconName": "briefcase",
+                          "onClick": "{{navigateTo('维保列表', {}, 'SAME_WINDOW')}}"
                         }
                       },
                       "type": "BUTTON_GROUP_WIDGET",
@@ -955,21 +986,36 @@
                         },
                         {
                           "key": "groupButtons.groupButton3.onClick"
+                        },
+                        {
+                          "key": "groupButtons.groupButtontyvm4tfiyp.onClick"
+                        },
+                        {
+                          "key": "groupButtons.groupButtonfhahb88jya.onClick"
                         }
                       ],
-                      "leftColumn": 12,
+                      "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
                           "key": "groupButtons.groupButton1.buttonColor"
                         },
                         {
                           "key": "groupButtons.groupButton2.buttonColor"
+                        },
+                        {
+                          "key": "groupButtons.groupButtontyvm4tfiyp.buttonColor"
+                        },
+                        {
+                          "key": "groupButtons.groupButton3.isVisible"
+                        },
+                        {
+                          "key": "groupButtons.groupButtonfhahb88jya.isVisible"
                         }
                       ],
                       "key": "zs2nuvvyf6",
                       "orientation": "horizontal",
                       "isDeprecated": false,
-                      "rightColumn": 52,
+                      "rightColumn": 63,
                       "widgetId": "d1omjzrgxm",
                       "isVisible": true,
                       "version": 1,

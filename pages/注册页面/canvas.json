@@ -360,8 +360,9 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button1",
-                      "onClick": "{{Query1.run()}}",
+                      "onClick": "{{Query1.run(() => navigateTo('登录页面', {}, 'SAME_WINDOW'), () => showAlert('错误','error'))}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "dynamicPropertyPathList": [],
                       "displayName": "按钮",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [

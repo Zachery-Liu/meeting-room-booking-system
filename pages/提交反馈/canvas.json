@@ -484,7 +484,8 @@
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
-                "status": 85
+                "status": 85,
+                "feedback_content": 290
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -675,7 +676,7 @@
                   "alias": "feedback_time",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "text",
+                  "columnType": "date",
                   "textColor": "",
                   "textSize": "0.875rem",
                   "fontStyle": "",
@@ -693,7 +694,9 @@
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"feedback_time\"]))}}",
                   "sticky": "",
                   "validation": {},
-                  "cellBackground": ""
+                  "cellBackground": "",
+                  "inputFormat": "YYYY-MM-DDTHH:mm:ss",
+                  "outputFormat": "YYYY-MM-DD HH:mm"
                 },
                 "handle_status": {
                   "allowCellWrapping": false,
@@ -870,7 +873,7 @@
                       "originalTopRow": 0,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 7,
+                      "originalBottomRow": 11,
                       "fontSize": "1.25rem",
                       "minDynamicHeight": 4
                     }
@@ -904,7 +907,7 @@
               "originalTopRow": 39,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 49,
+              "originalBottomRow": 52,
               "minDynamicHeight": 10
             }
           ]

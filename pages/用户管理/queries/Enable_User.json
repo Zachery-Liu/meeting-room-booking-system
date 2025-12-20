@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "Approve_User",
+    "name": "Enable_User",
     "datasource": {
       "name": "会议室预约管理系统数据库",
       "pluginId": "mysql-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE user_role_map\nSET role_id = 2 -- 升级为普通用户\nWHERE user_id = {{Table_Pending.triggeredRow.id}} -- 选中行的用户ID\n  AND role_id = 3; -- 双重保险，只改访客",
+      "body": "UPDATE user \nSET \n    status = 1, -- 0 代表禁用/已删除\n    update_time = NOW()\nWHERE id = {{Table_Pending.triggeredRow.id}}; -- 这里的 id 是 user 表的主键",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -43,7 +43,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "用户管理_Approve_User",
+  "id": "用户管理_Enable_User",
   "deleted": false,
-  "gitSyncId": "692af5888fc1e0541ea208a0_6944f15b78bb7c4683cb7120"
+  "gitSyncId": "692af5888fc1e0541ea208a0_69466f324f1d584d942c7536"
 }
