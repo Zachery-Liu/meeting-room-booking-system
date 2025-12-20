@@ -16,7 +16,7 @@
     "pageId": "权限管理",
     "collectionId": "权限管理_JSObject1",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "async () => {\n  if (!Input_PermName.text || !Input_PermCode.text || !Input_MenuPath.text) {\n    showAlert('请务必填写所有项！', 'warning');\n    return;\n  }\n  try {\n    await Create_Permission.run();\n    showAlert('权限创建成功！', 'success');\n    closeModal('Modal3');\n    await Get_All_Permissions.run();\n    resetWidget('Modal3', true);\n  } catch (error) {\n    if (error.message.includes('Duplicate')) {\n      showAlert('创建失败：该权限代号已存在！', 'error');\n    } else {\n      showAlert('创建失败：' + error.message, 'error');\n    }\n  }\n}",
